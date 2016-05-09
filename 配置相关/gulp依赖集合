@@ -1,0 +1,48 @@
+gulp-autoprefixer   
+//浏览器前缀相关
+
+gulp-ruby-sass  
+ //将scss文件转化为css
+
+gulp-minify-css
+// css压缩
+
+gulp-jsHint 
+// js代码验证
+
+gulp-concat
+// 文件拼接
+
+gulp-uglify
+// js压缩
+
+gulp-imagemin
+// 图片压缩
+
+gulp-livereload
+// 当监控目标文件后，只要发生改动就会刷新网页？
+
+gulp-clean
+// 清除目标目录的内容
+
+gulp-imagemin
+// imagemin-pngquant
+// 图片压缩 
+
+gulp-cache
+// 图片缓存,只有图片替换了才压缩
+
+gulp-notify
+// 更改提醒
+
+gulp-minify-html 
+//压缩html
+
+gulp-rename
+// 文件命名
+
+browser-sync
+// 浏览器同步刷新
+
+gulp-plumber
+//忽略错误继续执行

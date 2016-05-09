@@ -1,0 +1,20 @@
+首先, 
+
+git init 
+
+相当于标记，配置文件
+
+git add "文件名"  
+
+如果多个所有添加则：
+
+git add --all
+或者
+git add  .
+
+git commit -m '你的介绍，留言，更改了哪些之类的'
+
+---错误：nothing added to commit but untracked files present 
+---未提交
+
+
