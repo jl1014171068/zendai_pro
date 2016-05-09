@@ -25,23 +25,23 @@
   <script src="script/bootstrap.min.js"></script> 
  </head> 
  <body> 
-  <nav class="navbar navbar-default navbar-fixed-top zd-nav "> 
+ <nav class="navbar navbar-default navbar-fixed-top zd-nav "> 
    <div class="container-fluid pano"> 
     <!-- Brand and toggle get grouped for better mobile display --> 
-    <div class="navbar-header col-lg-2 col-sm-2 col-md-2 col-xs-4"> 
+    <div class="navbar-header col-lg-2 col-sm-2 col-md-2 col-xs-12"> 
      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
      <a class="navbar-brand " href="#"> <img src="images/logo.png" alt="" /> </a> 
     </div> 
-    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-12 pano" id="bs-example-navbar-collapse-1"> 
+    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-12 pano pt50" id="bs-example-navbar-collapse-1"> 
      <ul class="nav navbar-nav  pano"> 
       <li class="active"><a href="#">我的艺术中心 <span class="sr-only">(current)</span></a></li> 
       <li><a href="#">艺术品管理</a></li> 
       <li><a href="#">线上美术馆</a></li> 
      </ul> 
-     <div class="zd-nav-right pull-right"> 
+     <div class="zd-nav-right fright "> 
       <form class="navbar-left pano" role="search"> 
        <div class="btn-group "> 
-        <button type="button" class="btn search-sel  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 艺术作品 <i class="iconfont font16"></i> </button> 
+        <button type="button" class="btn search-sel  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 艺术作品 <i class="iconfont font16">&#xe623;</i> </button> 
         <ul class="dropdown-menu"> 
          <li><a href="#">艺术作品</a></li> 
          <li><a href="#">艺术家</a></li> 
@@ -49,7 +49,7 @@
         </ul> 
        </div> 
        <input type="search" class="inp-search form-control" aria-label="..." placeholder="搜索艺术作品" /> 
-       <button class="nav-searchBtn"><i class="iconfont"></i></button> 
+       <button class="nav-searchBtn"><i class="iconfont">&#xe600;</i></button> 
       </form> 
       <div class="right-tx pull-right"> 
        <img src="images/user-head.png" alt="" /> 
@@ -66,11 +66,528 @@
    </div>
    <!-- /.container-fluid --> 
   </nav> 
-  <!-- 导航结束 --> 
-  <div class="container-fluid  purple he100 pull-left"> 
-   <div class="row he100"> 
+  <!-- 导航结束 -->
+  <div class="container-fluid  purple  user-info"> 
+   <div class="row he100 clearfix"> 
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1  "> 
+     <div class="col-lg-3 col-md-3  col-sm-3  col-xs-12  userInfo-leftImg"> 
+      <a href="#" class="borderRadius"> <img src="images/art-tx.jpg" alt="..." /> </a> 
+     </div> 
+     <div class="col-lg-9  col-md-9  col-sm-9 col-xs-12   userInfo-top"> 
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pano"> 
+       <h1>邱志杰 <span class="label  "><img src="images/art-tip.png" alt="" /></span></h1> 
+       <div class="operation"> 
+        <a class="btn btn-default" href="#" role="button">查看作品</a> 
+        <a class="btn btn-default" href="#" role="button">加为好友</a> 
+        <a class="btn btn-default" href="#" role="button">发送私信</a> 
+       </div> 
+      </div> 
+      <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ulno state clearfix"> 
+       <li> <span>68</span> <p>本人公开<br />的作品</p> </li> 
+       <li> <span>145</span> <p>他人公开<br />的本人作品</p> </li> 
+       <li> <span>7</span> <p>本人公开<br />的藏品</p> </li> 
+       <li> <span>450</span> <p>艺术圈<br />的好友</p> </li> 
+      </ul> 
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 userInfo-detailed"> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         性别
+        </dt> 
+        <dd>
+         男
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         出生年月
+        </dt> 
+        <dd>
+         1979年7月
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         出生地
+        </dt> 
+        <dd>
+         中国上海
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         所在地
+        </dt> 
+        <dd>
+         中国上海
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         国籍
+        </dt> 
+        <dd>
+         中国
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+        <dt>
+         毕业院校
+        </dt> 
+        <dd>
+         中央美术学院
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <dt>
+         毕业时间
+        </dt> 
+        <dd>
+         2000年6月
+        </dd> 
+       </dl> 
+       <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+        <dt>
+         简介
+        </dt> 
+        <dd class="intro">
+         艺术家与策展人，1969年生于福建漳州，1992年毕业于浙江美术学院版画系，开始介入当代艺术活动，现为中国 美术学院跨媒体艺术学院教授，总体艺术工作室主任，硕士博士导师，中国美术学院艺术与社会思想研究所导师， 中国艺术研究院当代艺术院特邀专家，中国美术家协会实验艺术委员会委员。居住在杭州和北京。
+        </dd> 
+       </dl> 
+      </div> 
+     </div> 
+
+    </div>
+    <!-- 头部个人信息结束 -->
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ">
+      <h2>个展记录</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>开始时间</th>
+          <th>结束时间</th>
+          <th>展览名称</th>
+          <th>主办方</th>
+          <th>展览地点</th>
+          <th>认证状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>2016年3月18日</td>
+          <td>相遇——吴志鹏作品展</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>证大画廊</td>
+          <td><span><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>2016年3月18日</td>
+          <td>相遇——吴志鹏作品展</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>证大画廊</td>
+          <td><span><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>2016年3月18日</td>
+          <td>相遇——吴志鹏作品展</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>证大画廊</td>
+          <td class="rz"><span><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 一个表格结束 -->
+    <h2>个人画册出版</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>出版物名称</th>
+          <th>出版机构</th>
+          <th>出版时间</th>
+          <th>相关信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>中国当代艺术研究——感官媒介与认知方式的转变</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>         
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+        <tr>
+          <td>中国当代艺术研究——感官媒介与认知方式的转变</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>         
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 有一个表单结束 -->
+    <h2>其他出版物</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>作品名称</th>
+          <th>出版物名称</th>
+          <th>所在页码</th>
+          <th>出版机构</th>
+          <th>出版时间</th>
+          <th>相关信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>感官媒介与认知方式的转变</td>
+          <td>中国当代艺术研究</td>
+          <td>32</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+        <tr>
+          <td>感官媒介与认知方式的转变</td>
+          <td>中国当代艺术研究</td>
+          <td>32</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 有一个表单结束 -->
+   <h2>获奖情况</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>获奖时间</th>
+          <th>作品名</th>
+          <th>奖项名称</th>
+          <th>颁奖机构</th>
+          <th>相关信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>青海之滨观舞</td>
+          <td>徐悲鸿奖学金荣誉奖</td>
+          <td>中国美术家协会</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>青海之滨观舞</td>
+          <td>徐悲鸿奖学金荣誉奖</td>
+          <td>中国美术家协会</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 有一个表单结束 -->
+    <h2>作品被收藏情况</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>收藏时间</th>
+          <th>作品名</th>
+          <th>收藏的机构/个人</th>
+          <th>相关信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>青海之滨观舞</td>
+          <td>中国美术馆</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+        <tr>
+          <td>2016年1月1日</td>
+          <td>青海之滨观舞</td>
+          <td>中国美术馆</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 有一个表单结束 -->
+    <h2>其他出版物</h2>
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>作品名称</th>
+          <th>出版物名称</th>
+          <th>所在页码</th>
+          <th>出版机构</th>
+          <th>出版时间</th>
+          <th>相关信息</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>感官媒介与认知方式的转变</td>
+          <td>中国当代艺术研究</td>
+          <td>32</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+        <tr>
+          <td>感官媒介与认知方式的转变</td>
+          <td>中国当代艺术研究</td>
+          <td>32</td>
+          <td>上海喜马拉雅文化艺术基金会</td>
+          <td>2016年1月1日</td>
+          <td class="xgxx"><i class="iconfont font16">&#xe602;</i></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <!-- 有一个表单结束 -->
+    <div class="zd-list col-lg-12 col-md-12 col-sm-12 col-xs-12">
+       <h2>吴大师公开的作品集</h2>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 my">
+       <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-1.jpg" alt="...">
+          </a>
+          <div class="tip">
+              <dl class="dl-horizontal gk">
+               <dt>有12个作品</dt>
+               <dd>已公开</dd>
+             </dl>
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+      
+        <dl class="dl-horizontal pano">
+          <dt>默认作品集</dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 my">
+       <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-1.jpg" alt="...">
+          </a>
+          <div class="tip">
+              <dl class="dl-horizontal gk">
+               <dt>有12个作品</dt>
+               <dd>已公开</dd>
+             </dl>
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+      
+        <dl class="dl-horizontal pano">
+          <dt>默认作品集</dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 my">
+        <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-2.jpg" alt="...">
+          </a>
+          <div class="tip">
+              <dl class="dl-horizontal gk">
+               <dt>有12个作品</dt>
+               <dd>已公开</dd>
+             </dl>
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+      
+        <dl class="dl-horizontal pano">
+          <dt>默认作品集</dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 my">
+        <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-3.jpg" alt="...">
+          </a>
+          <div class="tip">
+              <dl class="dl-horizontal gk">
+               <dt>有12个作品</dt>
+               <dd>已公开</dd>
+             </dl>
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+        <dl class="dl-horizontal pano">
+          <dt>默认作品集</dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+      </div>
+    </div>
+    <!-- 灯箱结束 -->
+    <div class="zd-list  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2>吴大师公开的作品集</h2>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 other">
+        <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-2.jpg" alt="...">
+          </a>
+          <div class="tip">
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+       <div class="title">[油画]<b>女人花系列之饺椅</b></div>
+       <dl class="dl-horizontal">
+          <dt>作者：<a class="autor">吴大师</a></dt>
+          <dd><i class="iconfont font16">&#xe604;</i>4,874</dd>
+        </dl>
+        <dl class="dl-horizontal">
+          <dt>创作年代：<span>现代</span></dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+        <div class="art-info">作品尺寸：<span>长160厘米    宽80厘米</span></div>
+         <div class="authorTip">
+           <div class="authorTipCon">
+             <div class="authorTip-img" >
+             <img src="images/art-works-2.jpg" alt="张大师">
+           </div>
+           <h4>张大千</h4>
+           <p>男，1979年生于江苏南京，现 居于上海。1992年毕业于中央 美院。</p>
+           <p>本人公开的作品：3个</p>
+           <p>他人公开的本人作品：4个</p>
+           <p>他公开的藏品：2个</p>
+           <p>艺术圈的好友：238个</p>
+           <p>参展经历：3个</p>
+           <p>出版物：2个</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 other">
+         <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-2.jpg" alt="...">
+          </a>
+          <div class="tip">             
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+        <div class="title">[油画]<b>女人花系列之饺椅</b></div>
+       <dl class="dl-horizontal">
+          <dt>作者：<span class="autor">吴大师</span></dt>
+          <dd><i class="iconfont font16">&#xe604;</i>4,874</dd>
+        </dl>
+        <dl class="dl-horizontal">
+          <dt>创作年代：<span>现代</span></dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+        <div class="art-info">作品尺寸：<span>长160厘米    宽80厘米</span></div>
+         <div class="authorTip">
+           <div class="authorTipCon">
+             <div class="authorTip-img" >
+             <img src="images/art-works-2.jpg" alt="张大师">
+           </div>
+           <h4>张大千</h4>
+           <p>男，1979年生于江苏南京，现 居于上海。1992年毕业于中央 美院。</p>
+           <p>本人公开的作品：3个</p>
+           <p>他人公开的本人作品：4个</p>
+           <p>他公开的藏品：2个</p>
+           <p>艺术圈的好友：238个</p>
+           <p>参展经历：3个</p>
+           <p>出版物：2个</p>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!-- 灯箱结束 -->
+       
+    <div class="zd-list col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2>别人公开的吴大师的作品</h2>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 other">
+        <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-2.jpg" alt="...">
+          </a>
+          <div class="tip">
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+       <div class="title">[油画]<b>女人花系列之饺椅</b></div>
+       <dl class="dl-horizontal">
+          <dt>作者：<span class="autor">吴大师</span></dt>
+          <dd><i class="iconfont font16">&#xe604;</i>4,874</dd>
+        </dl>
+        <dl class="dl-horizontal">
+          <dt>创作年代：<span>现代</span></dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+        <div class="art-info">作品尺寸：<span>长160厘米    宽80厘米</span></div>
+         <div class="authorTip">
+           <div class="authorTipCon">
+             <div class="authorTip-img" >
+             <img src="images/art-works-2.jpg" alt="张大师">
+           </div>
+           <h4>张大千</h4>
+           <p>男，1979年生于江苏南京，现 居于上海。1992年毕业于中央 美院。</p>
+           <p>本人公开的作品：3个</p>
+           <p>他人公开的本人作品：4个</p>
+           <p>他公开的藏品：2个</p>
+           <p>艺术圈的好友：238个</p>
+           <p>参展经历：3个</p>
+           <p>出版物：2个</p>
+           </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 other">
+         <div class="imgTip">
+          <a href="#" class="thumbnail">
+            <img src="images/art-works-2.jpg" alt="...">
+          </a>
+          <div class="tip">             
+             <span>2011年作  如来随类化身。2011年作如来随类化身</span>
+          </div>
+        </div>
+        <div class="title">[油画]<b>女人花系列之饺椅</b></div>
+       <dl class="dl-horizontal">
+          <dt>作者：<span class="autor">吴大师</span></dt>
+          <dd><i class="iconfont font16">&#xe604;</i>4,874</dd>
+        </dl>
+        <dl class="dl-horizontal">
+          <dt>创作年代：<span>现代</span></dt>
+          <dd><i class="iconfont font14">&#xe603;</i>385</dd>
+        </dl>
+        <div class="art-info">作品尺寸：<span>长160厘米    宽80厘米</span></div>
+        <div class="authorTip">
+           <div class="authorTipCon">
+             <div class="authorTip-img" >
+             <img src="images/art-works-2.jpg" alt="张大师">
+           </div>
+           <h4>张大千</h4>
+           <p>男，1979年生于江苏南京，现 居于上海。1992年毕业于中央 美院。</p>
+           <p>本人公开的作品：3个</p>
+           <p>他人公开的本人作品：4个</p>
+           <p>他公开的藏品：2个</p>
+           <p>艺术圈的好友：238个</p>
+           <p>参展经历：3个</p>
+           <p>出版物：2个</p>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!-- 灯箱结束 -->
+    </div> 
    </div> 
-  </div>  
+  </div> 
+
   <script src="script/sctipt.js"></script> 
  </body>
 </html>

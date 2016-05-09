@@ -12,7 +12,7 @@
     var buttonReal=this.parentNode.parentNode.getElementsByTagName("button")[0];
     var divReal=this.parentNode.parentNode;
     var onc=$(this).parents(".uploads").find(".upload-btn");
-    buttonReal.remove();
+    // buttonReal.remove();
     
     if(spanReal){spanReal.remove();}
     onc.html("重新上传");

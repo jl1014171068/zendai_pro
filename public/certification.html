@@ -25,23 +25,23 @@
   <script src="script/bootstrap.min.js"></script> 
  </head> 
  <body> 
-  <nav class="navbar navbar-default navbar-fixed-top zd-nav "> 
+ <nav class="navbar navbar-default navbar-fixed-top zd-nav "> 
    <div class="container-fluid pano"> 
     <!-- Brand and toggle get grouped for better mobile display --> 
-    <div class="navbar-header col-lg-2 col-sm-2 col-md-2 col-xs-4"> 
+    <div class="navbar-header col-lg-2 col-sm-2 col-md-2 col-xs-12"> 
      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
      <a class="navbar-brand " href="#"> <img src="images/logo.png" alt="" /> </a> 
     </div> 
-    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-12 pano" id="bs-example-navbar-collapse-1"> 
+    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-12 pano pt50" id="bs-example-navbar-collapse-1"> 
      <ul class="nav navbar-nav  pano"> 
       <li class="active"><a href="#">我的艺术中心 <span class="sr-only">(current)</span></a></li> 
       <li><a href="#">艺术品管理</a></li> 
       <li><a href="#">线上美术馆</a></li> 
      </ul> 
-     <div class="zd-nav-right pull-right"> 
+     <div class="zd-nav-right fright "> 
       <form class="navbar-left pano" role="search"> 
        <div class="btn-group "> 
-        <button type="button" class="btn search-sel  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 艺术作品 <i class="iconfont font16"></i> </button> 
+        <button type="button" class="btn search-sel  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 艺术作品 <i class="iconfont font16">&#xe623;</i> </button> 
         <ul class="dropdown-menu"> 
          <li><a href="#">艺术作品</a></li> 
          <li><a href="#">艺术家</a></li> 
@@ -49,7 +49,7 @@
         </ul> 
        </div> 
        <input type="search" class="inp-search form-control" aria-label="..." placeholder="搜索艺术作品" /> 
-       <button class="nav-searchBtn"><i class="iconfont"></i></button> 
+       <button class="nav-searchBtn"><i class="iconfont">&#xe600;</i></button> 
       </form> 
       <div class="right-tx pull-right"> 
        <img src="images/user-head.png" alt="" /> 
@@ -71,17 +71,17 @@
    <div class="row he100"> 
     <div class=" pano he100 navbar-fixed-top  col-lg-2 col-sm-2 col-md-2 col-xs-4 left-nav"> 
      <ul class="ulno "> 
-      <li><i class="iconfont "></i><a href="#">艺术中心首页</a></li> 
-      <li class="active"><i class="iconfont "></i><a href="certification.html">实名认证</a></li> 
-      <li><i class="iconfont  valali"></i><a href="#">身份认证</a></li> 
-      <li><i class="iconfont"></i><a href="#">管理私信 </a><span class="badge">42</span></li> 
-      <li><i class="iconfont"></i><a href="#">管理好友</a></li> 
-      <li><i class="iconfont font14"></i><a href="#">修改个人信息</a></li> 
-      <li><i class="iconfont"></i><a href="#">修改头像</a></li> 
-      <li><i class="iconfont"></i><a href="#">修改手机号码</a></li> 
-      <li><i class="iconfont"></i><a href="#">修改密码</a></li> 
-      <li><i class="iconfont"></i><a href="#">账户设置</a></li> 
-      <li><i class="iconfont font14"></i><a href="#">退出</a></li> 
+      <li><i class="iconfont ">&#xe601;</i><a href="#">艺术中心首页</a></li> 
+      <li class="active"><i class="iconfont ">&#xe60b;</i><a href="certification.html">实名认证</a></li> 
+      <li><i class="iconfont  valali">&#xe611;</i><a href="#">身份认证</a></li> 
+      <li><i class="iconfont">&#xe605;</i><a href="#">管理私信 </a><span class="badge">42</span></li> 
+      <li><i class="iconfont">&#xe606;</i><a href="#">管理好友</a></li> 
+      <li><i class="iconfont font14">&#xe609;</i><a href="#">修改个人信息</a></li> 
+      <li><i class="iconfont">&#xe60c;</i><a href="#">修改头像</a></li> 
+      <li><i class="iconfont">&#xe60d;</i><a href="#">修改手机号码</a></li> 
+      <li><i class="iconfont">&#xe60e;</i><a href="#">修改密码</a></li> 
+      <li><i class="iconfont">&#xe60f;</i><a href="#">账户设置</a></li> 
+      <li><i class="iconfont font14">&#xe607;</i><a href="#">退出</a></li> 
      </ul> 
     </div> 
     <!-- 左侧导航部分 --> 
@@ -106,9 +106,10 @@
       </div> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-4 control-label">证件号码</label> 
-       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
+       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12 zd-select"> 
         <!-- <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> --> 
-        <select class="form-control"> <option>18位身份证</option> <option>16位身份证</option> </select> 
+        <select class="form-control"> <option>18位身份证</option> <option>16位身份证</option> </select>
+        <i class="iconfont font14">&#xe610;</i> 
        </div> 
       </div> 
       <div class="form-group"> 
@@ -116,14 +117,14 @@
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
         <input type="text" class="form-control" id="inputPassword3" /> 
        </div> 
-       <label class="checkbox-inline zd-checkbox"> <input type="checkbox" id="inlineCheckbox1" value="option1" /><i class="iconfont font14"></i>长期有效 </label> 
+       <label class="checkbox-inline zd-checkbox no-selected"> <input type="checkbox" id="inlineCheckbox1" value="option1" /><i class="iconfont font14">&#xe622;</i>长期有效 </label> 
       </div> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-4 control-label">证件正面图片</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12 uploads"> 
         <input type="file" class="upload-inp" id="upload1" accept="image/*" /> 
         <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14"></i>上传图片...</button> 
+        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
        </div> 
        <span class="col-lg-6 col-sm-6 col-md-6 col-xs-6 tip control-label">仅支持jpg、png格式。如果您使用的是护照，请上传护照信息页图片</span> 
       </div> 
@@ -132,7 +133,7 @@
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12 uploads"> 
         <input type="file" class="upload-inp" id="upload2" accept="image/*" /> 
         <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14"></i>上传图片...</button> 
+        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
        </div> 
        <span class="col-lg-6 col-sm-6 col-md-6 col-xs-6 tip control-label">仅支持jpg、png格式</span> 
       </div> 
@@ -141,7 +142,7 @@
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12 uploads"> 
         <input type="file" class="upload-inp" id="upload3" accept="image/*" /> 
         <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload3]').click();return false;"><i class="iconfont font14"></i>上传图片...</button> 
+        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload3]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
        </div> 
        <span class="col-lg-6 col-sm-6 col-md-6 col-xs-6 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span> 
       </div> 
