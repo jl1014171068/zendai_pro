@@ -1051,7 +1051,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5131,7 +5131,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5244,7 +5244,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "微软雅黑", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6136,13 +6136,11 @@ button.close {
 input,
 textarea {
   border: 0;
-  /* 方法1 */
-  -webkit-appearance: none;
-  /* 方法2 */ }
+  /* 方法1 */ }
 
 input[type="button"],
 input[type="submit"],
-input[type="reset"], select, button {
+input[type="reset"], button {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none; }
@@ -6158,5 +6156,3 @@ input[type="reset"], select, button {
 /*清除input=number的上下箭头*/
 input::-webkit-inner-spin-button {
   -webkit-appearance: none; }
-
-
