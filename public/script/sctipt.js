@@ -12,7 +12,7 @@
     var buttonReal=this.parentNode.parentNode.getElementsByTagName("button")[0];
     var divReal=this.parentNode.parentNode;
     var onc=$(this).parents(".uploads").find(".upload-btn");
-    // buttonReal.remove();
+    // buttonReal.hide();
     
     if(spanReal){spanReal.remove();}
     onc.html("重新上传");
@@ -65,3 +65,9 @@
     }
   })
    // checkbox选择
+   $(".zd-list .other .autor").hover(function(){
+      $(this).parents(".other").find(".authorTip").fadeIn(300);
+    },function(){
+      $(this).parents(".other").find(".authorTip").fadeOut(300);
+    })
+   // 艺术家信息页面作者信息鼠划效果

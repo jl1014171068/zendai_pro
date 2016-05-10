@@ -87,7 +87,7 @@ body {
     border: none;
     background: none;
     outline: none; }
-  @media (max-width: 760px) {
+  @media (max-width: 767px) {
     .zd-nav .navbar-nav {
       text-align: left;
       text-indent: 20px; }
@@ -106,10 +106,10 @@ body {
       background: #4a4a4a;
       color: #fff;
       margin-bottom: -5px;
-      padding: 10.4px 20px 17px; }
+      padding: 10.4px 18px 17px; }
       .zd-nav .navbar-nav li.active a:hover {
         border: none;
-        padding: 10.4px 20px 17px; }
+        padding: 10.4px 18px 17px; }
   .zd-nav .navbar-nav li a {
     color: #fff; }
     .zd-nav .navbar-nav li a:hover, .zd-nav .navbar-nav li a:focus {
@@ -278,10 +278,10 @@ body {
     padding-right: 250px; }
 
   .zd-nav .navbar-brand img {
-    margin-top: 2px; }
-
+    margin-top: 2px; } }
+@media (max-width: 1200px) {
   .left-nav .ulno li {
-    padding-left: 10%; } }
+    padding-left: 5%; } }
 .right-article {
   float: left;
   padding: 35px 0 0 70px; }
@@ -395,7 +395,7 @@ body {
     margin-top: 15px; }
     .user-info .userInfo-top .operation a {
       background: #e62344;
-      width: 26%;
+      margin-top: 10px;
       margin-right: 10px;
       border: none;
       color: #fff;
@@ -658,7 +658,13 @@ input[type=button], input[type=text], input[type=password], select {
     right: 24px;
     cursor: pointer; }
 
-@media (max-width: 760px) {
+@media (max-width: 767px) {
+  .zd-nav .navbar-left {
+    margin: 9px 2px; }
+
+  .navbar-form {
+    border: none; }
+
   .zd-nav-right {
     float: left !important;
     padding: 0 !important;
@@ -675,5 +681,25 @@ input[type=button], input[type=text], input[type=password], select {
 
   .zd-nav .navbar-brand img {
     margin-top: 0; } }
+@media screen and (min-width: 768px) and (max-width: 860px) {
+  .zd-nav .navbar-left .search-sel {
+    display: none; }
+
+  .zd-nav .navbar-left .inp-search {
+    padding: 6px 6px;
+    width: 70%; } }
+@media (max-width: 768px) {
+  .left-nav .badge {
+    display: none; }
+
+  .right-article .form-horizontal span.tip {
+    display: inline-block; }
+
+  .form-horizontal .control-label {
+    padding-top: 0; }
+
+  .right-article .form-horizontal .form-group button.file {
+    margin: 0;
+    padding: 0; } }
 
 /*# sourceMappingURL=style.css.map */
