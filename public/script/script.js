@@ -71,3 +71,8 @@
       $(this).parents(".other").find(".authorTip").fadeOut(300);
     })
    // 艺术家信息页面作者信息鼠划效果
+   var zdListMargin=parseInt($(".zd-list-li").css("marginLeft"));
+    if(zdListMargin<10){
+      $(".zd-list-li").css("margin","15px 15px");
+    }
+    // 设置user_info页面的列表，当间距小于10px的时候其四周的边距为15px

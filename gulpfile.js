@@ -46,7 +46,7 @@ gulp.task('scripts', function() {
   // return gulp.src(config.bootstrapDir+'/assets/javascripts/bootstrap.min.js')
      return gulp.src([config.jquery+'jquery.min.js',config.bootstrapDir+'/assets/javascripts/bootstrap.min.js']) 
     .pipe(concat('bootstrap.min.js'))
-    .pipe(addsrc('./script/*.js'))  
+    .pipe(addsrc('./script/*.*'))  
     .pipe(gulp.dest(config.publicDir+'/script/'));
 });
 // 图片压缩
