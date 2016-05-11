@@ -297,7 +297,8 @@ body {
     margin-bottom: 20px; }
   .right-article .zd-p {
     color: #666666;
-    font-size: 12px; }
+    font-size: 12px;
+    margin-bottom: 50px; }
     .right-article .zd-p b {
       color: #000000; }
   .right-article .form-horizontal .form-group {
@@ -674,7 +675,7 @@ body {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px; }
 
-input[type=button], input[type=text], input[type=password], select {
+input[type=button], input[type=text], input[type=password] {
   -webkit-appearance: none;
   outline: none; }
 
