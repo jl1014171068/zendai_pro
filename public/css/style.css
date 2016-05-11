@@ -1,9 +1,9 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'iconfont';
-  src: url("//at.alicdn.com/t/font_1462779017_2118678.eot");
+  src: url("//at.alicdn.com/t/font_1462965185_2468295.eot");
   /* IE9*/
-  src: url("//at.alicdn.com/t/font_1462779017_2118678.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1462779017_2118678.woff") format("woff"), url("//at.alicdn.com/t/font_1462779017_2118678.ttf") format("truetype"), url("//at.alicdn.com/t/font_1462779017_2118678.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1462965185_2468295.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1462965185_2468295.woff") format("woff"), url("//at.alicdn.com/t/font_1462965185_2468295.ttf") format("truetype"), url("//at.alicdn.com/t/font_1462965185_2468295.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 .iconfont {
   font-family: "iconfont" !important;
@@ -27,11 +27,17 @@ body, html {
   width: 100%;
   height: 100%; }
 
+.co66 {
+  color: #666; }
+
 .he100 {
   height: 100%; }
 
 .font14 {
   font-size: 14px !important; }
+
+.font12 {
+  font-size: 12px !important; }
 
 .font16 {
   font-size: 16px !important; }
@@ -235,8 +241,7 @@ body {
   min-height: 500px;
   height: 100%;
   overflow: auto;
-  margin-top: 50px;
-  border-right: #d6d6d6 solid 1px; }
+  margin-top: 50px; }
   .left-nav ul {
     padding-top: 29px; }
     .left-nav ul li {
@@ -298,7 +303,7 @@ body {
   .right-article .zd-p {
     color: #666666;
     font-size: 12px;
-    margin-bottom: 50px; }
+    margin-bottom: 30px; }
     .right-article .zd-p b {
       color: #000000; }
   .right-article .form-horizontal .form-group {
@@ -330,9 +335,9 @@ body {
     font-size: 18px;
     padding-top: 10px;
     padding-bottom: 10px; }
-  .right-article .form-horizontal .uploads .upload-btn {
+  .right-article .form-horizontal .uploads .upload-btn, .right-article .form-horizontal .upload .upload-btn {
     padding: 0; }
-  .right-article .form-horizontal .uploads > img {
+  .right-article .form-horizontal .uploads > img, .right-article .form-horizontal .upload > img {
     max-width: 100%; }
   .right-article .form-horizontal .resetBtn {
     color: #4a90e2 !important;
@@ -346,7 +351,6 @@ body {
 
 @media (max-width: 1200px) {
   .right-article {
-    margin-left: 0;
     padding: 0;
     padding-left: 50px; } }
 .zd-checkbox input[type='checkbox'] {
@@ -780,11 +784,40 @@ input[type=button], input[type=text], input[type=password] {
     margin: 15px -o-calc( (100% - 220px) / 2);
     margin: 15px calc( (100% - 220px) / 2); } }
 @media screen and (min-width: 768px) and (max-width: 890px) {
-  .right-article .form-group .control-label, .right-article .form-group .upload-btn, .right-article .form-group .tip, .right-article .form-group .uploads {
+  .right-article .form-group .control-label, .right-article .form-group .upload-btn, .right-article .form-group .tip, .right-article .form-group .uploads, .right-article .form-group .upload {
     width: 100%;
     margin: 5px 0; } }
 @media (min-width: 891px) {
   .right-article .form-horizontal .form-group > label {
-    padding-left: 5%; } }
+    padding-left: 5%; }
+
+  .right-article .form-horizontal .form-group .zd-checkbox {
+    padding-left: 15px; } }
+.upTip {
+  position: fixed;
+  top: 55px;
+  right: 0; }
+  .upTip .upTip-ul li {
+    white-space: nowrap;
+    padding: 8px 30px 8px 13px;
+    line-height: 1em;
+    border-bottom: #ccc dashed 1px; }
+  .upTip .upTip-ul li:last-child {
+    border: none; }
+
+.red {
+  color: #da4f4a !important; }
+
+.container-fluid {
+  width: 100% !important; }
+
+.pl10 {
+  padding-left: 10px; }
+
+.matbot {
+  border-top: #e2e2e2 solid 6px;
+  height: 34px !important;
+  width: 100%;
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

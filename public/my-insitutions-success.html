@@ -11,7 +11,7 @@
   <!-- 关闭邮箱识别 --> 
   <meta name="format-detection" content="telephone=no" /> 
   <!-- 关闭号码识别 --> 
-  <title>我的艺术中心-实名认证</title> 
+  <title>我的艺术中心-机构身份认证-完成</title> 
   <!-- Bootstrap --> 
   <link rel="stylesheet" href="css/app.css" /> 
   <link rel="stylesheet" href="css/style.css" /> 
@@ -72,8 +72,8 @@
     <div class=" pano he100 navbar-fixed-top  col-lg-2 col-sm-2 col-md-2 col-xs-4 left-nav "> 
      <ul class="ulno "> 
       <li><a href="#"><i class="iconfont ">&#xe601;</i>艺术中心首页</a></li> 
-      <li class="active"><a href="my-certification.html"><i class="iconfont ">&#xe60b;</i>实名认证</a></li> 
-      <li><a href="my-identity.html"><i class="iconfont  valali">&#xe611;</i>身份认证</a></li> 
+      <li><a href="my-certification.html"><i class="iconfont ">&#xe60b;</i>实名认证</a></li> 
+      <li class="active"><a href="my-identity.html"><i class="iconfont  valali">&#xe611;</i>身份认证</a></li> 
       <li><a href="#"><i class="iconfont">&#xe605;</i>管理私信 <span class="badge">42</span></a></li> 
       <li><a href="#"><i class="iconfont">&#xe606;</i>管理好友</a></li> 
       <li><a href="#"><i class="iconfont font14">&#xe609;</i>修改个人信息</a></li> 
@@ -85,71 +85,11 @@
      </ul> 
     </div> 
     <!-- 左侧导航部分 --> 
-
+ 
     <article class="right-article  col-lg-10 col-sm-10 col-md-10 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"> 
-     <h1 class="zd-h1 col-lg-12">实名认证</h1> 
-     <p class="zd-p col-lg-8">请按照要求填写您的真实信息和证照,<b>认证成功后不能再更改信息</b>。请放心，我们不会泄露您的隐私信息。我们的客服会在24雄狮内审核您的信息并给您反馈。</p> 
-     <form class="form-horizontal col-lg-12" id="real-name"> 
-      <div class="form-group"> 
-       <label for="inputEmail3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">真实姓名</label> 
-       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <input type="text" class="form-control" id="inputEmail3" /> 
-       </div> 
-      </div> 
-       
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件类型 </label> 
-       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12 zd-select"> 
-        <!-- <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> --> 
-        <select class="form-control"> <option>18位身份证</option> <option>护照</option><option>港澳台证件</option> </select>
-       </div> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件号码</label> 
-       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
-       </div> 
-      </div>
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件到期日期</label> 
-       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
-       </div> 
-       <label class="checkbox-inline zd-checkbox no-selected"> <input type="checkbox" id="inlineCheckbox1" value="option1" /><i class="iconfont font14">&#xe622;</i>长期有效 </label> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件正面图片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload1" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式。如果您使用的是护照，请上传护照信息页图片</span> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件背面图片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload2" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式</span> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">手持证件照片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload3" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload3]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span> 
-      </div> 
-      <div class="form-group"> 
-       <div class="col-sm-offset-2 col-lg-10"> 
-        <button type="submit" class="btn btn-default col-lg-2">提交认证</button> 
-       </div> 
-      </div> 
-     </form> 
+       <h1 class="zd-h1 col-lg-12">机构身份认证</h1> 
+     <p class="font12 col-lg-8"><b>您的身份认证申请已经提交，我们的客服会在24小时内审核您的信息并给您反馈</b>。</p> 
+     <p class="col-lg-8 font12 co66">您有任何疑问可以发邮件至：cs@zendai.com 或拨打400-888-8888。</p> 
     </article> 
    </div> 
   </div>  

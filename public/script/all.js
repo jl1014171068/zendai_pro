@@ -129,7 +129,6 @@ YMDselect.SetD=function(YMD){
     if (this.files && this.files[0]) {
     //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
     imgObjPreview.src = window.URL.createObjectURL(this.files[0]);
-    // console.log(this.parentNode.parentNode.getElementsByTagName("span")[0].innerHTML='111');
     var spanReal=this.parentNode.parentNode.getElementsByTagName("span")[0];
     var buttonReal=this.parentNode.parentNode.getElementsByTagName("button")[0];
     var divReal=this.parentNode.parentNode;

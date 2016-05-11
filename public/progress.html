@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="script/bootstrap.min.js"></script>
+</head>
+<body>
+	<input id="doc" type="file" multiple="multiple"/> 
+    <img id="preview" /> 
+     <script >
+function setImagePreview(parent,img) {
+    var docObj = document.getElementById(parent);
+    var imgObjPreview = document.getElementById(img);
+    var imgSrc;
+    if (docObj.files && docObj.files[0]) {
+        imgSrc=window.URL.createObjectURL(docObj.files[0]);     
+    } else {
+         docObj.select();
+       	 imgSrc = docObj.value;
+        try {
+            localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+            localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        } 
+        catch(e) {
+            return false;
+        }
+        document.selection.empty();
+    }
+    console.log(imgSrc);
+    return true;
+} 
+$("#doc").change(function(){
+	setImagePreview('doc','preview');
+	return false;
+})
+</script>
+</body>
+</html>
+
