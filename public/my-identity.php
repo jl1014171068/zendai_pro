@@ -13,8 +13,7 @@
   <!-- 关闭号码识别 --> 
   <title>我的艺术中心-个人身份认证</title> 
   <!-- Bootstrap --> 
-  <link rel="stylesheet" href="css/app.css" /> 
-  <link rel="stylesheet" href="css/style.css" /> 
+  <link rel="stylesheet" href="css/all.css">
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
@@ -171,25 +170,28 @@
       
        <span  class="col-lg-4 col-sm-4 col-md-4 col-xs-12 tip control-label">选填</span>
       </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">本人近期照片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload1" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式</span> 
-       
-      </div> 
-      <div class="form-group"> 
+      <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">本人近期照片 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="iden-upload1" accept="image/*"/>
+                <input type="hidden" id="iden-parameter1">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+              <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">仅支持jpg、png格式</span>
+     </div>
+  
+     <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">代表作品</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 upload"> 
-        <input type="file" class="upload-inp" id="upload2" accept="image/*" multiple="multiple"/> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
+       <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 upload"> 
+        <input type="file" class="upload-inp" id="iden-upload2" accept="image/*" multiple="multiple"/> 
+        <input type="hidden" id="iden-parameter2">       
        </div> 
-      <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png、tif格式。至少上传三个作品照片</span> 
-      </div>     
+       <ul id='images' class="uploadImgs  col-lg-10 col-sm-10 col-md-10 col-xs-12 hidden col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"></ul>
+      <span class="col-lg-4 col-sm-4 col-md-4 col-xs-12 tip control-label">仅支持jpg、png、tif格式。至少上传三个作品照片</span> 
+      </div>
+
       <div class="form-group"> 
        <div class="col-sm-offset-2 col-lg-10"> 
         <button type="submit" class="btn btn-default col-lg-2">提交认证</button> 
@@ -212,6 +214,58 @@
      new YMDselect('year2','month2');
      new PCAS("province1","city1");
      new PCAS("province2","city2") ;
+
+     upload("iden-upload1",'iden-parameter1','index.php',1,2);
+     ;$(function() {
+  var artImages=[];
+  var shuliang=5; //设置图片数量
+        $("#iden-upload2").uploadify({
+         swf           : '/swf/uploadify.swf',
+         uploader      : '/index.php',
+         'auto': true,
+          multi:true,
+         'fileTypeExts': '*.jpg;*.jpeg;*.gif;*.png',
+         'displayData': 'percentage',
+         'uploadLimit':shuliang,
+          'queueSizeLimit':shuliang,
+                              
+                 'onUploadSuccess':function(file,data,response){
+                  artImages.length=0;
+                    var data = JSON.parse(data);
+                    $.each(data.results,function(index, el){                      
+                       $.unique(artImages);
+                       artImages.push(data.results[index].savePath);
+                    })
+                     $("#iden-parameter2").val(artImages);       
+                     var html="";          
+                     $.each(artImages,function(i,d){
+                       html='<li class="col-lg-2 col-sm-2 col-md-2 col-xs-2"><img src="'+artImages[i]+'" alt=""><div class="removeImages"><i class="iconfont">&#xe635;</i></div><div class="state success">上传成功</div></li>';
+                                $("#images").removeClass('hidden').append(html);         
+                     })                      
+                     $("#iden-upload2").parents(".form-group").find('.tip').hide();
+                     $("#iden-upload2").parents(".upload").attr('class','col-lg-10 col-md-10 col-sm-10  col-xs-12 upload');
+                     var $uoloadli=$("#iden-upload2").parents(".form-group").find("li");
+                     $uoloadli.find(".removeImages").on('click',function(){
+                        var imgsrc=$(this).parents("li").find("img").attr('src');
+                        var ind=artImages.indexOf(imgsrc);                     
+                        artImages.splice(ind,1); 
+                        $(this).parents("li").remove();                         
+                        $("#iden-parameter2").val(artImages);
+                        var swfu = $('#upload2').data('uploadify');
+                        var stats = swfu.getStats();
+                        stats["successful_uploads"]--;
+                        swfu.setStats(stats); 
+                     })                     
+                 },
+                   'onSelectError':function(file, errorCode, errorMsg){
+                     switch(errorCode) {                      
+                         case -100:
+                              alert("文件数量超出系统限制,最多上传"+shuliang+'个！');
+                              break;                               
+                     }
+                 }
+    });
+});
   </script>
  </body>
 </html>

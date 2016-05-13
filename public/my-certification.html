@@ -13,8 +13,7 @@
   <!-- 关闭号码识别 --> 
   <title>我的艺术中心-实名认证</title> 
   <!-- Bootstrap --> 
-  <link rel="stylesheet" href="css/app.css" /> 
-  <link rel="stylesheet" href="css/style.css" /> 
+ <link rel="stylesheet" href="css/all.css">
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
@@ -117,7 +116,7 @@
        </div> 
        <label class="checkbox-inline zd-checkbox no-selected"> <input type="checkbox" id="inlineCheckbox1" value="option1" /><i class="iconfont font14">&#xe622;</i>长期有效 </label> 
       </div> 
-      <div class="form-group"> 
+      <<!-- div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件正面图片</label> 
        <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
         <input type="file" class="upload-inp" id="upload1" accept="image/*" /> 
@@ -125,7 +124,18 @@
         <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
        </div> 
        <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式。如果您使用的是护照，请上传护照信息页图片</span> 
-      </div> 
+      </div>  -->
+      <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">本人近期照片 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="iden-upload1" accept="image/*"/>
+                <input type="hidden" id="iden-parameter1">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+              <span  class="col-lg-2 col-sm-2 col-md-2 col-xs-12 tip control-label">选填</span>
+     </div>
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件背面图片</label> 
        <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 

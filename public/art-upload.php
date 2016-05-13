@@ -13,9 +13,7 @@
   <!-- 关闭号码识别 --> 
   <title>我的艺术中心-艺术品管理</title> 
   <!-- Bootstrap --> 
-  <link rel="stylesheet" href="css/app.css" /> 
-  <link rel="stylesheet" href="css/style.css" /> 
-  <link rel="stylesheet" href="css/uploadify.css"> 
+  <link rel="stylesheet" href="css/all.css">
 
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
@@ -108,7 +106,6 @@
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">代表作品</label> 
        <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 upload"> 
         <input type="file" class="upload-inp" id="upload2" accept="image/*" multiple="multiple"/> 
-        <!-- <button class="btn file btn-default form-control upload-btn"><i class="iconfont font14">&#xe608;</i>上传图片...</button> -->
         <input type="hidden" id="parameter2">       
        </div> 
        <ul id='images' class="uploadImgs  col-lg-10 col-sm-10 col-md-10 col-xs-12 hidden col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"></ul>

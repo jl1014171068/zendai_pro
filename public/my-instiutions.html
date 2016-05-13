@@ -13,8 +13,7 @@
   <!-- 关闭号码识别 --> 
   <title>我的艺术中心-机构身份认证</title> 
   <!-- Bootstrap --> 
-  <link rel="stylesheet" href="css/app.css" /> 
-  <link rel="stylesheet" href="css/style.css" /> 
+  <link rel="stylesheet" href="css/all.css">
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
@@ -89,16 +88,18 @@
     <article class="right-article  col-lg-10 col-sm-10 col-md-10 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"> 
      <h1 class="zd-h1 col-lg-12">机构身份认证</h1> 
      <p class="zd-p col-lg-8">请按照要求填写机构的真实信息和证照，<b>认证成功后不能再更改信息</b>。请放心，我们不会泄露您的隐私信息。<br/>机构申请身份认证需要提交机构加盖公章的授权书，<a href="#" class="red"><u>请先下载授权书</u></a>，然后按要求填写盖章。<br/>我们的客服会在24小时内审核您的信息并给您反馈。</p> 
-     <form class="form-horizontal col-lg-12" id="real-name">    
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">机构LOGO </label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload1" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload1]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div>
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式 <span class="red pl10">认证成功后只能每30天修改一次</span></span>  
-      </div> 
+     <form class="form-horizontal col-lg-12" id="real-name">   
+      <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">机构LOGO </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload1" accept="image/*"/>
+                <input type="hidden" id="ins-parameter1">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+             <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">仅支持jpg、png格式 <span class="red pl10">认证成功后只能每30天修改一次</span></span>  
+     </div> 
       <div class="form-group"> 
        <label for="inputEmail3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">机构名称</label> 
        <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12"> 
@@ -151,57 +152,68 @@
         <input type="text" class="form-control" id="inputPassword3" /> 
        </div> 
       </div>
-  <div class="form-group"> 
+      <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件到期日期</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
         <input type="text" class="form-control" id="inputPassword3" /> 
        </div> 
        <label class="checkbox-inline zd-checkbox no-selected"> <input type="checkbox" id="inlineCheckbox1" value="option1" /><i class="iconfont font14">&#xe622;</i>长期有效 </label> 
       </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件正面图片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload2" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式。如果您使用的是护照，请上传护照信息页图片</span> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件背面图片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload3" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload3]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式</span> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">手持证件照片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload4" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload4]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span> 
-      </div> 
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">机构证照</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload5" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload5]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">请上传以下凭证的任意一种，营业执照、民办非企业机构登记证书、国有事业法人单位 仅支持jpg、png格式</span> 
-      </div>
-      <div class="form-group"> 
-       <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">授权书</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload6" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload6]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-      </div>
+      <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">证件正面图片 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload2" accept="image/*"/>
+                <input type="hidden" id="ins-parameter2">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+             <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">仅支持jpg、png格式。如果您使用的是护照，请上传护照信息页图片</span> 
+     </div> 
+     <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">证件背面图片 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload3" accept="image/*"/>
+                <input type="hidden" id="ins-parameter3">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+             <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">仅支持jpg、png格式</span>  
+     </div> 
+     <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">手持证件照片 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload4" accept="image/*"/>
+                <input type="hidden" id="ins-parameter4">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+             <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span>  
+     </div> 
+     <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">机构证照 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload5" accept="image/*"/>
+                <input type="hidden" id="ins-parameter5">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+             <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">请上传以下凭证的任意一种，营业执照、民办非企业机构登记证书、国有事业法人单位 仅支持jpg、png格式</span>  
+     </div> 
+     <div class="form-group">
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">授权书 </label>               
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="ins-upload6" accept="image/*"/>
+                <input type="hidden" id="ins-parameter6">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+            
+     </div> 
       <div class="form-group"> 
        <div class="col-sm-offset-2 col-lg-10"> 
         <button type="submit" class="btn btn-default col-lg-2">提交认证</button> 
@@ -212,5 +224,13 @@
    </div> 
   </div>  
   <script src="script/all.js"></script> 
+  <script>
+    upload("ins-upload1",'ins-parameter1','index.php',1,2);
+    upload("ins-upload2",'ins-parameter2','index.php',1,2);
+    upload("ins-upload3",'ins-parameter3','index.php',1,2);
+    upload("ins-upload4",'ins-parameter4','index.php',1,2);
+    upload("ins-upload5",'ins-parameter5','index.php',1,2);
+    upload("ins-upload6",'ins-parameter6','index.php',1,2);
+  </script>
  </body>
 </html>
