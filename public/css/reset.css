@@ -1,0 +1,24 @@
+@charset "UTF-8";
+input,
+textarea {
+  border: 0;
+  /* 方法1 */ }
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"], button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none; }
+
+/*加在父级，禁止用户选中其下的文字*/
+.no-selected {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/*清除input=number的上下箭头*/
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
