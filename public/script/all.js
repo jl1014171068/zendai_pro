@@ -119,6 +119,192 @@ YMDselect.SetD=function(YMD){
   }
 }
 // 上面是年月日插件
+ $.extend({
+        telReg:function(str){
+            var telz = /^((\+?86)|(\(\+86\)))?1\d{10}$/;
+            if(telz.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        },
+        pwdReg:function(str){
+            var pwd = /^[\u4E00-\u9FA5A-Za-z0-9]{6,20}$/;
+            if(pwd.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        },
+        emailReg:function(str){
+          var email=/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+          if(email.test(str)){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+     })
+ // 封装的简易验证组件
+  function erroDate(s,calback){
+    //调用的话这里写的比较死，
+    var regist;
+    var text;
+    var erros={
+         erroTel:'手机号不能为空/手机号码格式错误',
+         erroReg:'验证码不能为空/验证码错误',
+         erroUserName:'姓名不能为空',
+         erroPwd:'密码不能为空/密码格式错误',
+         erroAgainPwd:'两次输入密码不一致，请重新输入',
+         erroCheck:'请阅读并同意《证大艺术用户协议》',
+         erroEmail:'邮箱地址不能为空/邮箱地址格式错误'
+    }
+    $.each(erros,function(k,v){
+      if(s==k){
+        text=erros[k];   
+      }
+    })
+    if(calback){
+      // 如果需要其他样式之类的话就写返回值，例子如下，否则直接空
+      //  if(calback=='regist'){
+      //  regist='<div class="prompt col-lg-offset-3 col-md-offset-3 col-sm-offset-3  col-xs-offset-0"><p class=" bg-danger fail">'+text+'</p></div>'
+      //  return regist
+      // }
+    }
+    else{
+      regist='<div class="prompt col-lg-offset-3 col-md-offset-3 col-sm-offset-3  col-xs-offset-0"><p class=" bg-danger fail">'+text+'</p></div>'
+       return regist;
+    }
+  }
+  // 简易的报错提示信息
+function verificationCode(dom,seconds){
+    $(dom+" .regBtn").on('click',function(){
+     var $tel=$(dom+" .zdTel");
+      if($.telReg($tel.val())){
+        var time=seconds;
+        var timer=setInterval(function(){
+           $(dom).addClass('click').attr("disabled",true);
+           $(dom).html(time+"秒后重发");
+           if(time<0){
+            $(dom).removeClass('click').removeAttr("disabled").html('重新获取验证码');
+            clearInterval(timer);
+           }
+            time-=1;
+        },1000);
+      }
+      else{
+        $tel.parents(".form-group ").find(".prompt").remove();
+        $tel.focus();
+        $tel.parents(".form-group ").append(erroDate("erroTel"));
+      }
+      return false;
+    })
+}
+// 验证码函数verificationCode(dom元素,秒数);
+
+function validateForm(form){
+  var yanzhengma=111;//仅作测试用
+  var $tel=$(form+" .zdTel");
+  var $reg=$(form+" .zdReg");
+  var $userName=$(form+" .zdUserName");
+  var $pwd=$(form+" .zdPwd");
+  var $apwd=$(form+" .zdAgainPwd");
+  var $email=$(form+" .zdEmail");
+  var $chec=$(form+" .zdChec");
+  var $sub=$(form+" .zdSub");
+
+  $sub.on('click',function(){    
+    if($tel.length>0){
+      if(!$.telReg($tel.val())){
+        $tel.parents(".form-group ").find(".prompt").remove();
+        $tel.focus();
+        $tel.parents(".form-group ").append(erroDate("erroTel")).addClass('error');
+        return false;
+      }
+      else{
+         $tel.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($email.length>0){
+      if(!$.emailReg($email.val())){
+        $email.parents(".form-group ").find(".prompt").remove();
+        $email.focus();
+        $email.parents(".form-group ").append(erroDate("erroEmail")).addClass('error');
+        return false;
+      }
+      else{
+        alert(2);
+         $email.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($reg.length>0){
+      if($reg.val()!=yanzhengma){
+        $reg.parents(".form-group ").find(".prompt").remove();
+        $reg.focus();
+        $reg.parents(".form-group ").append(erroDate("erroReg")).addClass('error');
+        return false;
+      }
+      else{
+         $reg.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($userName.length>0){
+      if(!$userName.val()){
+        $userName.parents(".form-group ").find(".prompt").remove();
+        $userName.focus();
+        $userName.parents(".form-group ").append(erroDate("erroUserName")).addClass('error');
+        return false;
+      }
+       else{
+         $userName.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($pwd.length>0){
+      if(!$.pwdReg($pwd.val())){
+        $pwd.parents(".form-group ").find(".prompt").remove();
+        $pwd.focus();
+        $pwd.parents(".form-group ").append(erroDate("erroPwd")).addClass('error');
+        return false;
+      }
+      else{
+         $pwd.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($apwd.length>0){
+      if($apwd.val()!=$pwd.val()){
+        $apwd.parents(".form-group ").find(".prompt").remove();
+        $apwd.focus();
+        $apwd.parents(".form-group ").append(erroDate("erroAgainPwd")).addClass('error');
+        return false;
+      }
+      else{
+         $apwd.parents(".form-group ").addClass('succ');
+      }
+    }
+    if($chec.length>0){
+      if(!$chec.prop('checked')){
+        $chec.parents(".form-group ").find(".prompt").remove();
+        $chec.focus();
+        $chec.parents(".form-group ").append(erroDate("erroCheck")).addClass('error');
+        return false;
+      }
+      else{
+         $chec.parents(".form-group ").addClass('succ');
+      }
+    }
+
+    return true;
+
+  })
+  $(form+" .req").on('input propertychange',function(){
+     $(this).parents(".form-group ").removeClass('error');
+     $(this).parents(".form-group ").find(".prompt").remove();
+  });
+}
+// 表单验证组件调用方式为validateForm("dom元素带id调用或类前缀之类的")
 
     $("#real-name .uploads").each(function(index,el){
    var fileUl=document.getElementById('real-name');
@@ -310,6 +496,17 @@ $("#creation .zd-radio").click(function() {
     });     
 });
 // 上传作品页面的调用json取值
+
+   $("#argu-btn").on('click',function(){
+     var reid=$(this).attr('rel');
+     $("#reg-arguee .modal-body form").attr('action',reid);
+     $("#reg-arguee").modal();
+     $("#arguee-sub").on('click',function(){
+        $("#reg-arguee").modal('hide'); 
+     })
+   });
+ // 手机注册页面查看用户协议的模态窗口
+
 /*
 SWFObject v2.2 <http://code.google.com/p/swfobject/> 
 is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 

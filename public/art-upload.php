@@ -104,12 +104,12 @@
       </div> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">代表作品</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 upload"> 
+       <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 upload"> 
         <input type="file" class="upload-inp" id="upload2" accept="image/*" multiple="multiple"/> 
         <input type="hidden" id="parameter2">       
        </div> 
        <ul id='images' class="uploadImgs  col-lg-10 col-sm-10 col-md-10 col-xs-12 hidden col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"></ul>
-      <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label"><span class="red">必填</span>，艺术品图片。至少提供1个主图，可选提供辅图不超过4个，第一个图片默认为主图</span> 
+      <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label"><span class="red">必填</span>，艺术品图片。至少提供1个主图，可选提供辅图不超过4个，第一个图片默认为主图</span> 
       </div>     
        <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术品描述 </label> 

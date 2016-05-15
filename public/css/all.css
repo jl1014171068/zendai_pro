@@ -6569,8 +6569,8 @@ body {
   -ms-border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-  padding: 1px 2px 1px 2px;
-  margin-right: 3px;
+  padding: 1px;
+  margin-right: 6px;
   color: #fff; }
 
 .check-a i {
@@ -7195,6 +7195,236 @@ input[type=button], input[type=text], input[type=password] {
   font-size: 14px;
   font-weight: 500; }
 
+/* // 上传作品页结束 */
+.zd-reg-nav {
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1900;
+  text-align: center; }
+  .zd-reg-nav .navbar-brand {
+    padding-left: 0;
+    width: 100%;
+    text-align: left; }
+    .zd-reg-nav .navbar-brand img {
+      max-height: 100%;
+      display: inline-block; }
+  .zd-reg-nav .zd-navRight {
+    padding: 15px;
+    font-size: 14px;
+    color: #999; }
+    .zd-reg-nav .zd-navRight a {
+      color: #ff0000; }
+
+.zd-regist .reg-step {
+  list-style: none;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-bottom: #dddddd solid 1px;
+  display: block; }
+  .zd-regist .reg-step li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    position: relative;
+    float: left; }
+    .zd-regist .reg-step li:after {
+      content: '';
+      width: 100%;
+      height: 10px;
+      background: #dddddd;
+      position: absolute;
+      left: 50%;
+      top: 16px;
+      margin-top: -1px;
+      z-index: -1; }
+    .zd-regist .reg-step li span {
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      color: #aaaaaa;
+      font-size: 14px; }
+    .zd-regist .reg-step li div {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      -o-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%;
+      background: #dddddd;
+      margin: 0 auto;
+      display: block;
+      text-align: center;
+      line-height: 40px;
+      font-size: 14px;
+      margin-bottom: 10px; }
+    .zd-regist .reg-step li.over:before {
+      background: #5cb85c;
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      top: 19px; }
+    .zd-regist .reg-step li.over i {
+      background: #5cb85c;
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin: auto;
+      position: absolute;
+      top: -27px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 100%;
+      -o-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%; }
+      .zd-regist .reg-step li.over i:after {
+        content: '';
+        position: absolute;
+        border: 10px solid #000;
+        top: 4px;
+        right: -14px;
+        border-color: transparent  transparent  transparent #5cb85c; }
+    .zd-regist .reg-step li.loging span {
+      color: #5cb85c; }
+    .zd-regist .reg-step li.loging div {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+      background: #5cb85c; }
+    .zd-regist .reg-step li.loging i {
+      margin: auto;
+      position: absolute;
+      top: 6px;
+      left: 0;
+      bottom: 0;
+      font-size: 28px;
+      right: 0;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 100%;
+      -o-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%; }
+  .zd-regist .reg-step > li:last-child:after {
+    height: 0; }
+
+.zd-regist .zd-regist-label {
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 5%; }
+
+.zd-regist .tip {
+  color: #aaaaaa;
+  font-size: 14px;
+  text-align: left; }
+
+.zd-regist .zd-regForm {
+  padding: 30px 15px; }
+
+.zd-regist button[type='submit'] {
+  background: #e62344;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px; }
+
+.zd-regist button.regBtn {
+  border: #cccccc solid 1px;
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  background: #fff;
+  background-image: none;
+  font-size: 12px;
+  color: #666666; }
+  .zd-regist button.regBtn.click {
+    background: #d4d4d4;
+    color: #000; }
+
+.zd-regist .zd-checkbox {
+  padding-left: 0; }
+
+.zd-regist .error input[type='text'] {
+  border: #ebccd1 solid 1px; }
+
+.zd-regist .succ input[type='text'] {
+  border: #d6e9c6 solid 1px; }
+
+.zd-regist .prompt {
+  margin-left: -ms-calc(25% + 15px);
+  margin-left: -o-calc(25% + 15px);
+  margin-left: calc(25% + 15px);
+  width: -ms-calc(33.33333% - 30px);
+  width: -o-calc(33.33333% - 30px);
+  width: calc(33.33333% - 30px);
+  float: left; }
+  .zd-regist .prompt p {
+    padding: 10px 15px;
+    margin-top: -2px;
+    color: #333;
+    display: block;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: 0px 0px 5px 5px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1) inset;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-border-radius: 6px;
+    background: rgba(242, 222, 222, 0.81); }
+
+.zd-regist .check .prompt {
+  margin-top: 10px; }
+
+.zd-regist .reg-succ-con .top {
+  padding-bottom: 40px;
+  border-bottom: #dddddd solid 1px; }
+  .zd-regist .reg-succ-con .top .i-succ {
+    color: #5cb85c;
+    font-size: 80px;
+    line-height: 1;
+    text-align: right;
+    padding: 0; }
+  .zd-regist .reg-succ-con .top h1 {
+    font-size: 30px;
+    color: #5cb85c;
+    padding-top: 15px;
+    padding-left: 0px;
+    font-weight: 600; }
+  .zd-regist .reg-succ-con .top span {
+    font-size: 18px;
+    color: #888888;
+    padding: 0 0 30px 0; }
+  .zd-regist .reg-succ-con .top div {
+    padding-left: 0; }
+    .zd-regist .reg-succ-con .top div .succ-upload {
+      width: 40%;
+      color: #fff;
+      background: #5cb85c; }
+
+.zd-regist .reg-succ-con .bottom {
+  padding-left: 15px; }
+  .zd-regist .reg-succ-con .bottom li {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 2; }
+
+.zd-regist .reg-succ-con .bottom-h4 {
+  color: #333333;
+  font-size: 16px;
+  margin-top: 20px; }
+
 /*
 Uploadify
 Copyright (c) 2012 Reactive Apps, Ronnie Garcia
@@ -7202,14 +7432,14 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 */
 .uploadify {
   position: relative;
-  margin-bottom: 1em; }
+  /* margin-bottom: 1em; */ }
 
 .uploadify-button.disabled {
   background-color: #D0D0D0;
   color: #808080; }
 
 .uploadify-queue {
-  margin-bottom: 1em; }
+  /* margin-bottom: 1em; */ }
 
 .uploadify-queue-item {
   display: none;
