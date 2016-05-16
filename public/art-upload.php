@@ -14,6 +14,7 @@
   <title>我的艺术中心-艺术品管理</title> 
   <!-- Bootstrap --> 
   <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
@@ -98,7 +99,19 @@
        <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术品分类</label> 
         <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <select class="form-control"><option value="1">花鸟虫鱼</option><option value="1">花鸟虫鱼</option></select>
+        <select class="form-control" id='art-type'>
+        <option value="1">油画</option>
+        <option value="2">版画</option>
+        <option value="3">水彩</option>
+        <option value="4">素描</option>
+        <option value="5">中国书画</option>
+        <option value="6">雕塑/装置</option>
+        <option value="7">摄影图片</option>
+        <option value="8">影像</option>
+        <option value="9">工艺美术</option>
+        <option value="10">文献书籍</option>
+        <option value="11">其他</option>
+        </select>
        </div> 
         <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label"><span class="red">必填</span>，请选择艺术品的类别。</span>
       </div> 
@@ -132,18 +145,18 @@
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术家姓名</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
+        <input type="text" class="form-control"  /> 
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
       </div>
      <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">出生年月</label> 
        <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 zd-select"> 
-        <!-- <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> --> 
+        <!-- <input type="password" class="form-control"  placeholder="Password"> --> 
         <select class="form-control" name="year1"></select>       
        </div>
        <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 zd-select" > 
-        <!-- <input type="password" class="form-control" id="inputPassword3" placeholder="Password"> --> 
+        <!-- <input type="password" class="form-control"  placeholder="Password"> --> 
         <select  class="form-control" name="month1"></select>   
        </div>    
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
@@ -163,19 +176,37 @@
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
       </div> 
       <h3 class="col-lg-12 art-h3">艺术品其他信息</h3> 
+       <div class="form-group " id='information'> 
+       <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">版本信息</label> 
+       <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
+        <input type="text" class="form-control" /> 
+       </div> 
+       <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
+      </div>
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">尺寸</label> 
-       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12">
+       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12 long">
          <span class="input-group-addon">长</span>
          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
          <span class="input-group-addon">厘米</span>
        </div>
-       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12 ">
+       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12 width">
          <span class="input-group-addon">宽</span>
          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
          <span class="input-group-addon">厘米</span>
        </div> 
-       <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
+       <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label enterTip">选填</span>
+         
+       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12 col-lg-offset-2 mat15 hidden height">
+         <span class="input-group-addon">高</span>
+         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+         <span class="input-group-addon">厘米</span>
+       </div>
+       <div class="input-group col-lg-2 col-md-2 col-sm-2  col-xs-12  mat15 hidden length">
+         <span class="input-group-addon">时长</span>
+         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+         <span class="input-group-addon">hms</span>
+       </div>
       </div>
     <div class="form-group" id="creation"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">创作年代</label> 
@@ -193,8 +224,23 @@
           <select id="creations" class="form-control"></select>
         </div>
       </div> 
-      <div class="form-group">
-              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术家签名 </label> 
+       <div class="form-group hidden" id='seal'>
+              <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">款识/印章</label> 
+              <div class="input-group col-lg-4 col-md-4 col-sm-4 mb10 col-xs-12 ">
+                <span class="input-group-addon">文字描述</span>
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+              </div>              
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+              <span  class="col-lg-2 col-sm-2 col-md-2 col-xs-12 tip control-label">选填</span>
+              <div class="col-lg-10 col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="upload6" accept="image/*"/>
+                <input type="hidden" id="parameter6">       
+              </div>   
+              </div>        
+      </div>
+      <div class="form-group" id='signature'>
+              <label class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术家签名 </label> 
               <div class="input-group col-lg-4 col-md-4 col-sm-4 mb10 col-xs-12 ">
                 <span class="input-group-addon">文字描述</span>
                 <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
@@ -208,34 +254,50 @@
               </div>   
               </div>        
       </div>
-      <div class="form-group"> 
+
+
+      <div class="form-group" id='farmed'> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">装裱状态</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
+        <input type="text" class="form-control"  /> 
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
       </div>
-       <div class="form-group"> 
+       <div class="form-group" id='appearance'> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">品相</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <select class="form-control"><option value="">请选择</option></select>
+        <select class="form-control">
+        <option value="">请选择</option>
+        <option value="">10品</option>
+        <option value="">9品</option>
+        <option value="">8品</option>
+        <option value="">7品</option>
+        <option value="">6品</option>
+        <option value="">5品及以下</option>
+        </select>
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
       </div> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">来源</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <select class="form-control"><option value="">请选择</option></select>
+        <select class="form-control" id='art-source'>
+        <option value="0">请选择</option>
+        <option value="1">自创</option>
+        <option value="2">购买</option>
+        <option value="3">获赠</option>
+        <option value="4">借进</option>
+        </select>
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
-       <div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
-           <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">购买时间</label> 
+       <div class="col-lg-10 line-div shopTime hidden col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+       <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">购买时间</label> 
        <div class="col-lg-3 col-md-3 col-sm-3   col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
+        <input type="text" class="form-control"  /> 
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
        </div>
-       <div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+       <div class="col-lg-10 line-div hidden  shopPrice col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">购买价格</label> 
        <div class="input-group col-lg-3 col-md-3 col-sm-3  col-xs-12 ">
          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
@@ -243,14 +305,14 @@
        </div>
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
        </div>
-       <div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+       <div class="col-lg-10 line-div hidden shopObj col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">购买对象</label> 
        <div class="col-lg-3 col-md-3 col-sm-3   col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
+        <input type="text" class="form-control"  /> 
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
        </div>
-       <div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+       <div class="col-lg-10 line-div hidden shopPic col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">本人近期照片</label> 
              <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 uploadsin"> 
                 <input type="file" class="upload-inp" id="upload5" accept="image/*"/>
@@ -263,23 +325,46 @@
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">状态</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
-        <select class="form-control"><option value="">请选择</option><option value="">请选择</option></select>
+        <select class="form-control" id='art-status'>
+        <option value="0">请选择</option>
+        <option value="1">在库</option>
+        <option value="2">已售</option>
+        <option value="3">已赠</option>
+        <option value="4">借出</option>
+        </select>
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
-      <div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+      <div class="col-lg-10 hidden status-address line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">在库位置</label> 
        <div class="col-lg-3 col-md-3 col-sm-3   col-xs-12"> 
-        <input type="text" class="form-control" id="inputPassword3" /> 
+        <input type="text" class="form-control"  /> 
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
        </div>
-<div class="col-lg-10 line-div col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+       <div class="col-lg-10 line-div hidden status-price col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">购买价格</label> 
        <div class="input-group col-lg-3 col-md-3 col-sm-3  col-xs-12 ">
          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
          <span class="input-group-addon">元</span>
        </div>
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
+       </div>
+       <div class="col-lg-10 line-div hidden status-purpose col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+           <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">已赠目的</label> 
+       <div class="input-group col-lg-3 col-md-3 col-sm-3  col-xs-12 ">
+         <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+         <span class="input-group-addon">元</span>
+       </div>
+       <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
+       </div>
+      <div class="col-lg-10 line-div hidden status-pic col-md-10 col-sm-10 pl mt10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0">
+           <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">相关附件</label> 
+             <div class="col-lg-3 col-md-3 col-sm-3  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="upload7" accept="image/*"/>
+                <input type="hidden" id="parameter7">       
+              </div>
+              <div class='uploadsinImg hidden col-lg-9 col-md-9 col-sm-9  col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0'></div>
+             <span  class="col-lg-3 col-sm-3 col-md-3 col-xs-12 tip control-label">选填</span>
        </div>
       </div> 
       <div class="form-group"> 
@@ -436,6 +521,8 @@ upload("upload2",'parameter2','index.php',1,4);
 upload("upload3",'parameter3','index.php',1,4);
 upload("upload4",'parameter4','index.php',1,2);
 upload("upload5",'parameter5','index.php',1,2);
+upload("upload6",'parameter6','index.php',1,2);
+upload("upload7",'parameter7','index.php',1,2);
   </script>
  </body>
 </html>

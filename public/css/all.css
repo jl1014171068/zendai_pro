@@ -7024,6 +7024,7 @@ input[type=button], input[type=text], input[type=password] {
   vertical-align: -1px !important; }
 
 .uploadImgs {
+  margin-top: 10px;
   list-style: none; }
   .uploadImgs li {
     margin-right: 15px;
@@ -7424,6 +7425,13 @@ input[type=button], input[type=text], input[type=password] {
   color: #333333;
   font-size: 16px;
   margin-top: 20px; }
+
+.enterTip {
+  height: 34px;
+  display: block; }
+
+.mat15 {
+  margin-top: 15px; }
 
 /*
 Uploadify

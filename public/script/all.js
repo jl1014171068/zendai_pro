@@ -506,7 +506,120 @@ $("#creation .zd-radio").click(function() {
      })
    });
  // 手机注册页面查看用户协议的模态窗口
-
+$("#art-type").change(function(event) {
+  var valText=$(this).val();
+     switch(valText){
+      // #appearance  品相id
+      // #information 版本信息
+      // .long  长
+      // .width 宽
+      // .height 高度
+      // .length 时长
+      // #seal 印章
+      // #signature 艺术家签名
+      // #farmed  装裱状态
+         case '1'||'3'||'4':
+         $("#information,.height,.length,#seal").addClass('hidden');
+         $("#appearance,.long,.width,#signature,#farmed").removeClass('hidden');
+         break;
+         case '2'||'7'||'10':
+         $(".height,.length,#seal").addClass('hidden');
+         $("#appearance,.long,.width,#signature,#farmed,#information").removeClass('hidden');
+         break;
+        case '5':
+         $(".height,.length,#signature").addClass('hidden');
+         $("#seal,#appearance,.long,.width,,#farmed,#information").removeClass('hidden');
+         break;
+         case '6':
+        $("#seal,#farmed").addClass('hidden');
+         $(".height,.length,#information,#appearance,.long,.width,#signature").removeClass('hidden');
+         break;
+         case '8':
+         $("#appearance,.long,.width,.height,#seal,#farmed").addClass('hidden');
+         $(".length,#information,#signature").removeClass('hidden');
+         break;
+         case '9'||'11':
+         $(".length,#seal").addClass('hidden');
+         $("#information,#appearance,.height,.long,.width,#signature,#farmed").removeClass('hidden');
+         break;
+     }
+});
+$("#art-source").change(function(){
+   var valText=$(this).val();
+   var $parents=$("#art-source").parents('.form-group');
+     switch(valText){
+         case '0':
+         $parents.find(".line-div").addClass('hidden');
+         $parents.find("input").val('');
+         break;
+         case '1':
+         $parents.find(".line-div").removeClass('hidden');
+         $parents.find(".shopTime").find('.tl').text('自创时间');
+         $parents.find(".shopPrice").find('.tl').text('自创价格');
+         $parents.find(".shopObj").find('.tl').text('自创对象');
+         $parents.find(".shopPic").find('.tl').text('相关附件照片');
+         break;
+         case '2':
+         $parents.find(".line-div").removeClass('hidden');
+         $parents.find(".shopTime").find('.tl').text('购买时间');
+         $parents.find(".shopPrice").find('.tl').text('购买价格');
+         $parents.find(".shopObj").find('.tl').text('购买对象');
+         $parents.find(".shopPic").find('.tl').text('相关附件照片');
+         break;
+         case '3':
+         $parents.find(".line-div").removeClass('hidden');
+         $parents.find(".shopTime").find('.tl').text('获赠时间');
+         $parents.find(".shopPrice").find('.tl').text('获赠价格');
+         $parents.find(".shopObj").find('.tl').text('获赠对象');
+         $parents.find(".shopPic").find('.tl').text('相关附件照片');
+         break;
+         case '4':
+         $parents.find(".line-div").removeClass('hidden');
+         $parents.find(".shopTime").find('.tl').text('借进时间');
+         $parents.find(".shopPrice").find('.tl').text('借进价格');
+         $parents.find(".shopObj").find('.tl').text('借进对象');
+         $parents.find(".shopPic").find('.tl').text('相关附件照片');
+         break;
+     }
+})
+$("#art-status").change(function(){
+   var valText=$(this).val();
+   var $parents=$("#art-status").parents('.form-group');
+     switch(valText){
+         case '0':
+         $parents.find(".line-div").addClass('hidden');
+         $parents.find("input").val('');
+         break;
+         case '1':
+         $parents.find(".status-address,.status-price").removeClass('hidden');
+         $parents.find(".status-purpose,.status-pic").addClass('hidden');
+         $parents.find(".status-address").find('.tl').text('在库位置');
+         $parents.find(".status-price").find('.tl').text('购买价格');
+         break;
+         case '2':
+         $parents.find(".status-address,.status-price,.status-purpose,.status-pic").removeClass('hidden');
+         $parents.find(".status-address").find('.tl').text('售出时间');
+         $parents.find(".status-price").find('.tl').text('售出价格');
+         $parents.find(".status-purpose").find('.tl').text('售出对象');
+         $parents.find(".status-pic").find('.tl').text('相关附件');
+         break;
+         case '3':
+         $parents.find(".status-address,.status-price,.status-purpose,.status-pic").removeClass('hidden');
+         $parents.find(".status-address").find('.tl').text('赠出时间');
+         $parents.find(".status-price").find('.tl').text('赠出对象');
+         $parents.find(".status-purpose").find('.tl').text('赠出目的');
+         $parents.find(".status-pic").find('.tl').text('相关附件');
+         break;
+         case '4':
+        $parents.find(".status-address,.status-price,.status-purpose,.status-pic").removeClass('hidden');
+         $parents.find(".status-address").find('.tl').text('借出时间');
+         $parents.find(".status-price").find('.tl').text('借出对象');
+         $parents.find(".status-purpose").find('.tl').text('借出目的');
+         $parents.find(".status-pic").find('.tl').text('相关附件');
+         break;
+     }
+})
+// 上传作品页面状态，来源，艺术品分类的联动js
 /*
 SWFObject v2.2 <http://code.google.com/p/swfobject/> 
 is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 
