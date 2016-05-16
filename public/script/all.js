@@ -619,7 +619,17 @@ $("#art-status").change(function(){
          break;
      }
 })
-// 上传作品页面状态，来源，艺术品分类的联动js
+$("#real-name .zd-radio").on('click',function(){
+  $("#real-name input[type='radio']").each(function(){
+  if($("#inlineRadio2").prop('checked')){
+     $(".artInfo").addClass('hidden');
+  }
+   if($("#inlineRadio3").prop('checked')){
+     $(".artInfo").removeClass('hidden');
+  }
+})
+})
+// 上传作品页面状态，来源，艺术品分类,艺术品作者区分,的联动js
 /*
 SWFObject v2.2 <http://code.google.com/p/swfobject/> 
 is released under the MIT License <http://www.opensource.org/licenses/mit-license.php> 

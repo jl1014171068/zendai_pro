@@ -14,7 +14,6 @@
   <title>我的艺术中心-艺术品管理</title> 
   <!-- Bootstrap --> 
   <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="css/style.css">
 
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
@@ -141,7 +140,8 @@
         </label> 
        <span  class="col-lg-4 col-sm-4 col-md-4 col-xs-12 tip control-label red">必填</span>
       </div>
-      <h3 class="col-lg-12 art-h3">艺术家信息</h3> 
+      <div class="artInfo hidden">
+         <h3 class="col-lg-12 art-h3">艺术家信息</h3> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">艺术家姓名</label> 
        <div class="col-lg-4 col-md-d col-sm-4  col-xs-12"> 
@@ -175,6 +175,7 @@
        </div> 
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
       </div> 
+      </div>
       <h3 class="col-lg-12 art-h3">艺术品其他信息</h3> 
        <div class="form-group " id='information'> 
        <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">版本信息</label> 
