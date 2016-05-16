@@ -6185,9 +6185,9 @@ input::-webkit-inner-spin-button {
 @charset "UTF-8";
 @font-face {
   font-family: 'iconfont';
-  src: url("//at.alicdn.com/t/font_1463044317_5104878.eot");
+  src: url("//at.alicdn.com/t/font_1463374685_9237316.eot");
   /* IE9*/
-  src: url("//at.alicdn.com/t/font_1463044317_5104878.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1463044317_5104878.woff") format("woff"), url("//at.alicdn.com/t/font_1463044317_5104878.ttf") format("truetype"), url("//at.alicdn.com/t/font_1463044317_5104878.svg#iconfont") format("svg");
+  src: url("//at.alicdn.com/t/font_1463374685_9237316.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1463374685_9237316.woff") format("woff"), url("//at.alicdn.com/t/font_1463374685_9237316.ttf") format("truetype"), url("//at.alicdn.com/t/font_1463374685_9237316.svg#iconfont") format("svg");
   /* iOS 4.1- */ }
 
 .iconfont {
@@ -7426,12 +7426,34 @@ input[type=button], input[type=text], input[type=password] {
   font-size: 16px;
   margin-top: 20px; }
 
+.zd-regist .register-h4 {
+  color: #333333;
+  font-size: 20px;
+  margin: 20px 0 15px; }
+
+.zd-regist .register-span {
+  font-size: 14px !important;
+  color: #333333 !important;
+  margin-bottom: 5px;
+  display: block; }
+
+.zd-regist .register-btn {
+  background: #5cb85c;
+  color: #fefefe;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 15px; }
+
 .enterTip {
   height: 34px;
   display: block; }
 
 .mat15 {
   margin-top: 15px; }
+
+.green {
+  color: #5cb85c; }
 
 /*
 Uploadify

@@ -319,7 +319,7 @@
                 <input type="file" class="upload-inp" id="upload5" accept="image/*"/>
                 <input type="hidden" id="parameter5">       
               </div>
-              <div class='uploadsinImg hidden col-lg-9 col-md-9 col-sm-9  col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0'></div>
+              <div class='uploadsinImg hidden col-lg-9 col-md-9 col-sm-9  col-xs-12'></div>
              <span  class="col-lg-3 col-sm-3 col-md-3 col-xs-12 tip control-label">选填</span>
        </div>
       </div> 
@@ -518,7 +518,7 @@
 // 上传代表作品多图
 new YMDselect('year1','month1');
 // 出生年月调用
-upload("upload2",'parameter2','index.php',1,4);
+// upload("upload2",'parameter2','index.php',1,4);
 upload("upload3",'parameter3','index.php',1,4);
 upload("upload4",'parameter4','index.php',1,2);
 upload("upload5",'parameter5','index.php',1,2);
