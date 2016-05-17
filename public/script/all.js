@@ -1406,14 +1406,15 @@ function validateForm(form){
     }
   })
    // checkbox选择
-   $(".zd-list .other .autor").hover(function(){
-      $(this).parents(".other").find(".authorTip").fadeIn(300);
-    },function(){
-      $(this).parents(".other").find(".authorTip").fadeOut(300);
-    })
+   $(".zd-list .other .autor").mouseover(function(event) {
+      $(this).parents(".other").find(".authorTip").show();
+    });
+    $(".zd-list .other .autor").mouseout(function(event) {
+      $(this).parents(".other").find(".authorTip").hide();
+    });
    // 艺术家信息页面作者信息鼠划效果
    var zdListMargin=parseInt($(".zd-list-li").css("marginLeft"));
-    if(zdListMargin<10){
+    if(zdListMargin<15){
       $(".zd-list-li").css("margin","15px 15px");
     }
     // 设置user_info页面的列表，当间距小于10px的时候其四周的边距为15px
@@ -1666,3 +1667,114 @@ $("#real-name .zd-radio").on('click',function(){
 })
 })
 // 上传作品页面状态，来源，艺术品分类,艺术品作者区分,的联动js
+$(".art-list-top .art-icon").on('click',function(){
+    if($(this).parents('.art-topnav').attr('class').indexOf('active')>-1){
+       $(this).parents('.art-topnav').removeClass('active');
+    }
+    else{
+       $(this).parents('.art-topnav').addClass('active').siblings('.art-topnav').removeClass('active');
+    }
+})
+// 作品列表页弹出
+ $(".zd-lightBox .lighimg").on('click',function(){
+       var html='<div class="zdModal ano"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 zdclose"><i class="iconfont">&#xe63a;</i></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 prev"><i class="iconfont">&#xe638;</i></a> <div class="zdModal-diaog col-lg-10 col-md-10 col-sm-8 col-xs-8"><div class="zdLightImgs"><img src="" alt=""></div></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 next"><i class="iconfont">&#xe639;</i></a></div>';
+       $('body').append(html);
+       var height=$(window).height();
+       $(".zdModal .prev,.zdModal .next").css('lineHeight',height+'px');
+       var modal=$(".zdModal");
+       // 灯箱盒子
+       var now=$(this).index();
+       // 当前点击的li的index
+       var thisParent=$(this).parents(".zd-lightBox");
+       //图片列表
+       var prev=modal.find('.prev');
+       var next=modal.find('.next');
+       var colse=modal.find('.zdclose');
+       //左右切换和关闭按钮
+       var length=$(this).parents('.zd-lightBox').find('.lighimg').length;
+       function lightBox(){ 
+       // modal.removeClass('hidden');     
+        var imgSrc=thisParent.find('.lighimg').eq(now).find('img').attr('src');
+        modal.find('.zdLightImgs').find('img').attr('src',imgSrc);
+       }
+       lightBox();
+       colse.on('click',function(){
+        $(".zdModal").remove();
+       })
+       if(length>2){   
+        prev.removeClass('visbHidden');
+        next.removeClass('visbHidden');    
+       next.on('click',function(){
+         now++;
+         console.log(now);
+         if(now>length-1){
+           now=0;
+         } 
+         lightBox();
+       })
+       prev.on('click',function(){        
+          now--;
+          if(now<0){
+            now=length-1;
+          }
+          lightBox();
+       })
+       }
+       else{
+        prev.addClass('visbHidden');
+        next.addClass('visbHidden');
+       }
+     })
+  // 上面这个是灯箱效果类名跟层次要一致
+  $(".imgModal").on('click',function(){
+     var html='<div class="zdModal ano"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 zdclose"><i class="iconfont">&#xe63a;</i></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 prev"><i class="iconfont">&#xe638;</i></a> <div class="zdModal-diaog col-lg-10 col-md-10 col-sm-8 col-xs-8"><div class="zdLightImgs"><img src="" alt=""></div></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 next"><i class="iconfont">&#xe639;</i></a></div>';
+       $('body').append(html);
+     var modal=$(".zdModal");
+     // 灯箱盒子
+     var prev=modal.find('.prev');
+     var next=modal.find('.next');
+     var colse=modal.find('.zdclose');
+      var imgSrc=$(this).parent().attr('dataSrc');
+      modal.find('.zdLightImgs').find('img').attr('src',imgSrc);
+      prev.addClass('visbHidden');
+      next.addClass('visbHidden');
+      colse.on('click',function(){
+         $(".zdModal").remove();
+       })
+  })
+  // 单图点击预览，图片源地址暂放在其父级dataSrc,调用是imgModal的类名
+   $("#setStatus").on('click',function(){
+    var reid=$(this).attr('rel');
+    $("#setForm .modal-body form").attr('action',reid);
+    $("#setForm").modal();
+  });
+  //上传作品页面--新建·一个作品页的模态窗口
+   $("#sub-status").click(function() {
+   $.ajax({
+     url: 'index.php',
+     type: 'post',
+     dataType: 'json',
+     success:function(data){
+        alert(1);
+     }
+   })
+  });
+   upload("setUpload1",'setParameter1','index.php',1,2);
+   // 上面是更改艺术品状态
+    $("#setTip").on('click',function(){
+    var reid=$(this).attr('rel');
+    $("#setTipForm .modal-body form").attr('action',reid);
+    $("#setTipForm").modal();
+  });
+  //上传作品页面--新建·一个作品页的模态窗口
+   $("#sub-tip").click(function() {
+   $.ajax({
+     url: 'index.php',
+     type: 'post',
+     dataType: 'json',
+     success:function(data){
+        alert(1);
+     }
+   })
+  });
+  // 上面是更改备忘录

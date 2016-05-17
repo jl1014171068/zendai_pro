@@ -354,7 +354,6 @@
            <label for="inputPassword3" class="col-lg-1 tl  col-sm-1 col-md-2 col-xs-12 control-label">已赠目的</label> 
        <div class="input-group col-lg-3 col-md-3 col-sm-3  col-xs-12 ">
          <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-         <span class="input-group-addon">元</span>
        </div>
        <span  class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">选填</span>
        </div>
