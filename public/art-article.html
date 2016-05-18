@@ -11,9 +11,10 @@
   <!-- 关闭邮箱识别 --> 
   <meta name="format-detection" content="telephone=no" /> 
   <!-- 关闭号码识别 --> 
-  <title>我的艺术中心-艺术品管理</title> 
+  <title>我的艺术中心-作品详情</title> 
   <!-- Bootstrap --> 
   <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- 下面是自己写的样式和重置样式 --> 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
@@ -163,14 +164,17 @@
                   <li><i class="iconfont font16 val2">&#xe603;</i><span>145</span></li>
                 </ul>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 userInfo-detailed"> 
-                   <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-                    <dt>艺术品持有人</dt> 
-                    <dd>李四</dd> 
-                   </dl> 
-                   <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
-                    <dt> 艺术品分类</dt> 
-                    <dd>版画</dd> 
-                   </dl> 
+                   <div class="inline clearfix">
+                       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+                         <dt>艺术品持有人</dt> 
+                         <dd>李四</dd> 
+                       </dl> 
+                       <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
+                         <dt> 艺术品分类</dt> 
+                         <dd>版画</dd> 
+                       </dl> 
+                   </div>
+                   <div class="inline clearfix">
                    <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                     <dt>作者姓名</dt> 
                     <dd>吴大师</dd> 
@@ -178,7 +182,9 @@
                    <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                     <dt>艺术品尺寸</dt> 
                     <dd>长：70厘米  宽：40厘米</dd> 
-                   </dl> 
+                   </dl>
+                   </div> 
+                   <div class="inline clearfix">
                    <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                     <dt>创作年代</dt> 
                     <dd>1999年9月</dd> 
@@ -187,6 +193,8 @@
                     <dt>签名</dt>
                     <dd dataSrc='images/art-works-2.jpg'>有本人签名<i class="iconfont font16 huang imgModal">&#xe602;</i></dd> 
                    </dl> 
+                   </div>
+                   <div class="inline clearfix">
                    <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                     <dt>装裱状态</dt> 
                     <dd>厚木框装裱</dd> 
@@ -194,7 +202,9 @@
                    <dl class="dl-horizontal col-lg-6 col-md-6 col-sm-6 col-xs-12"> 
                     <dt>品相</dt> 
                     <dd>8品</dd> 
-                   </dl>               
+                   </dl> 
+                   </div>
+                   <div class="inline clearfix">              
                    <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     <dt>艺术品描述</dt> 
                     <dd class="intro">
@@ -204,18 +214,25 @@
                     艺术价值《清明上河图》虽然场面热闹，但表现的并非繁荣市景，而是一
                     幅带有忧患意识的“盛世危图”，官兵懒散税务重。</dd> 
                    </dl>
+                   </div>
+                   <div class="inline clearfix">
                    <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     <dt>艺术品来源</dt> 
                     <dd class="intro" dataSrc='images/art-works-1.jpg'>1999年12月，以 8,888,888 元，从 张三 处购买 <i class="iconfont huang font16 imgModal">&#xe602;</i></dd> 
-                   </dl>  
+                   </dl> 
+                   </div> 
+                   <div class="inline clearfix">
                     <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     <dt>艺术品状态</dt> 
                     <dd class="intro">在库，在书房书柜里 <a href="#" id='setStatus' rel='default'>编辑</a></dd> 
                    </dl>  
+                   </div>
+                   <div class="inline clearfix">
                     <dl class="dl-horizontal col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
                     <dt>备忘录</dt> 
                     <dd class="intro">3月18日隔壁老王出价500万，我准备考虑一下。 <a href="#" id='setTip' rel='default'>编辑</a></dd> 
                    </dl>  
+                   </div>
                 </div>
              </div>
           </div>
@@ -275,7 +292,7 @@
           <td>32</td>
           <td>上海喜马拉雅文化艺术基金会</td>
           <td>2016年1月1日</td>
-          <td dataSrc='images/art-works-1.jpg'><i class="iconfont font16 huang">&#xe602;</i></td>
+          <td dataSrc='images/art-works-1.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
         </tr>
         <tr>
           <td>感官媒介与认知方式的转变</td>
@@ -283,7 +300,7 @@
           <td>32</td>
           <td>上海喜马拉雅文化艺术基金会</td>
           <td>2016年1月1日</td>
-          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang">&#xe602;</i></td>
+          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
         </tr>
       </tbody>
     </table>
@@ -307,13 +324,14 @@
           <td>吴大师</td>
           <td>马大师</td>
           <td>购买（80000元）</td>
-          <td dataSrc='images/art-works-1.jpg'><i class="iconfont font16 huang">&#xe602;</i></td>
+          <td dataSrc='images/art-works-1.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
         </tr>
         <tr>
           <td>感官媒介与认知方式的转变</td>
           <td>马大师</td>
           <td>李大师</td>
           <td>赠送</td>
+          <td></td>
         </tr>
       </tbody>
     </table>

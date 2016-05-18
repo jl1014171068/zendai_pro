@@ -7861,11 +7861,14 @@ input[type=button], input[type=text], input[type=password] {
       color: #999;
       font-weight: normal;
       display: inline; }
-  .art-article .art-article-con .userInfo-detailed .dl-horizontal {
-    padding-left: 0;
+  .art-article .art-article-con .userInfo-detailed .inline {
     border-bottom: #cccccc dashed 1px;
     padding-bottom: 8px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    width: 100%; }
+  .art-article .art-article-con .userInfo-detailed .dl-horizontal {
+    padding-left: 0;
+    margin-bottom: 0; }
     .art-article .art-article-con .userInfo-detailed .dl-horizontal dt {
       text-align: left;
       width: auto;
@@ -7968,6 +7971,10 @@ input[type=button], input[type=text], input[type=password] {
 
 .ma4 {
   margin-left: 4px; }
+
+@media (max-width: 1200px) {
+  .art-article {
+    padding-right: 50px; } }
 
 /*
 Uploadify
