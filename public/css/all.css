@@ -7839,28 +7839,32 @@ input[type=button], input[type=text], input[type=password] {
     margin: 0; }
     .art-article .art-article-con .right h1 .label {
       padding: 0 5px; }
-  .art-article .art-article-con .right .status li {
-    display: inline-block;
-    margin-right: 20px; }
-    .art-article .art-article-con .right .status li span {
-      font-size: 30px;
-      font-weight: 600;
-      color: #666666; }
-  .art-article .art-article-con .right .status i {
-    color: #b4b4b4;
-    font-size: 20px;
-    vertical-align: 6px;
-    margin-right: 10px; }
-  .art-article .art-article-con .right .rightTop dl {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    display: inline-block;
-    margin-right: 10px; }
-    .art-article .art-article-con .right .rightTop dl dt, .art-article .art-article-con .right .rightTop dl dd {
-      font-size: 14px;
-      color: #999;
-      font-weight: normal;
-      display: inline; }
+  .art-article .art-article-con .right .status {
+    text-align: right; }
+    .art-article .art-article-con .right .status li {
+      display: inline-block;
+      margin-right: 20px; }
+      .art-article .art-article-con .right .status li span {
+        font-size: 30px;
+        font-weight: 600;
+        color: #666666; }
+    .art-article .art-article-con .right .status i {
+      color: #b4b4b4;
+      font-size: 20px;
+      vertical-align: 6px;
+      margin-right: 10px; }
+  .art-article .art-article-con .right .rightTop {
+    text-align: left; }
+    .art-article .art-article-con .right .rightTop dl {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      display: inline-block;
+      margin-right: 10px; }
+      .art-article .art-article-con .right .rightTop dl dt, .art-article .art-article-con .right .rightTop dl dd {
+        font-size: 14px;
+        color: #999;
+        font-weight: normal;
+        display: inline; }
   .art-article .art-article-con .userInfo-detailed .inline {
     border-bottom: #cccccc dashed 1px;
     padding-bottom: 8px;
@@ -7975,8 +7979,10 @@ input[type=button], input[type=text], input[type=password] {
 @media (max-width: 1200px) {
   .art-article {
     padding-right: 50px; }
-  .art-list .zd-list-li {
+  .art-list .zd-list-li, .myWorks .zd-list-li {
     margin: 15px 20px; }
+  .myWorks .zd-list-li {
+    margin: 15px 40px 15px; }
   .artRecord {
     padding-right: 50px; } }
 
@@ -8059,6 +8065,552 @@ input[type=button], input[type=text], input[type=password] {
 @media (max-width: 1200px) {
   .artRecord .art-con .search .inp-search {
     width: 65px; } }
+
+/* 艺术品记录的4个页面结束 */
+.topStatus {
+  border-bottom: #ccc solid 1px;
+  background: #eee;
+  height: auto;
+  padding: 30px 0;
+  margin-bottom: 60px; }
+  .topStatus .media {
+    margin-bottom: 50px; }
+  .topStatus .media-left {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+    .topStatus .media-left img {
+      max-height: 80px;
+      max-width: 80px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px; }
+  .topStatus .media-body {
+    padding-left: 30px; }
+    .topStatus .media-body h4 {
+      font-size: 20px;
+      color: #000000;
+      font-weight: bold; }
+      .topStatus .media-body h4 span {
+        font-size: 12px;
+        color: #aaaaaa;
+        font-weight: normal; }
+    .topStatus .media-body p {
+      font-size: 14px;
+      color: #000;
+      padding-top: 10px; }
+  .topStatus .tip h2 {
+    color: #a94442;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .topStatus .tip .btn {
+    max-width: 140px;
+    background: #fff;
+    margin-top: 10px;
+    padding: 6px 26px;
+    margin-right: 10px;
+    border: #eee solid 1px;
+    color: #888888;
+    font-weight: 600;
+    text-shadow: none;
+    font-size: 18px; }
+    .topStatus .tip .btn.danger {
+      color: #fff !important;
+      background: #e62344; }
+
+#nonpa {
+  padding-top: 0; }
+
+.pull-pono {
+  padding: 0 !important; }
+
+.bottomStatus {
+  border-top: #ccc solid 1px;
+  margin-top: 90px;
+  background: #eee;
+  height: auto;
+  padding: 30px 0; }
+  .bottomStatus .media {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: #ccc dashed 1px; }
+  .bottomStatus .media-left {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px; }
+    .bottomStatus .media-left img {
+      max-height: 80px;
+      max-width: 80px;
+      border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px; }
+  .bottomStatus .media-body {
+    padding-left: 30px; }
+    .bottomStatus .media-body h4 {
+      font-size: 20px;
+      color: #000000;
+      font-weight: bold; }
+      .bottomStatus .media-body h4 span {
+        font-size: 12px;
+        color: #aaaaaa;
+        font-weight: normal; }
+    .bottomStatus .media-body p {
+      font-size: 14px;
+      color: #000;
+      padding-top: 10px; }
+  .bottomStatus .tip h2 {
+    color: #a94442;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px; }
+  .bottomStatus .tip .btn {
+    max-width: 140px;
+    background: #fff;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 26px;
+    border: #eee solid 1px;
+    color: #888888;
+    font-weight: 600;
+    text-shadow: none;
+    font-size: 18px; }
+    .bottomStatus .tip .btn.danger {
+      color: #fff !important;
+      background: #e62344; }
+
+/* 艺术家认证作品结束 */
+.recStatusTop {
+  margin: 55px 0;
+  background: #eee;
+  height: auto;
+  border: #ccc solid 1px;
+  border-right: none;
+  border-left: none;
+  padding: 10px 0 30px; }
+  .recStatusTop .tip {
+    text-align: center; }
+    .recStatusTop .tip h2 {
+      color: #a94442;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+      .recStatusTop .tip h2 span {
+        color: #999999; }
+    .recStatusTop .tip .btn {
+      max-width: 140px;
+      background: #fff;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 6px 26px;
+      border: #eee solid 1px;
+      color: #888888;
+      font-weight: 600;
+      text-shadow: none;
+      font-size: 18px; }
+      .recStatusTop .tip .btn.danger {
+        color: #fff !important;
+        background: #e62344; }
+
+/* 艺术品认证确认页、结束 */
+.myWorks {
+  margin-top: 20px;
+  padding-right: 70px;
+  padding-bottom: 150px; }
+  .myWorks .art-top {
+    margin-bottom: 30px; }
+    .myWorks .art-top .zd-h1 {
+      margin: 0; }
+    .myWorks .art-top .top-right .btn-group {
+      border: #cccccc solid 1px;
+      float: right !important;
+      border-radius: 6px;
+      -o-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -webkit-border-radius: 6px; }
+      .myWorks .art-top .top-right .btn-group button[type='button'] {
+        padding: 6px 15px;
+        background: #fff;
+        border: none;
+        color: #888888; }
+        .myWorks .art-top .top-right .btn-group button[type='button'].active {
+          outline: none;
+          color: #d63839;
+          background: #eeeeee; }
+    .myWorks .art-top .del {
+      background: #d4d4d4;
+      color: #000; }
+  .myWorks .art-con .form-inline {
+    width: 100%;
+    background: #eeeeee;
+    padding: 6px 12px;
+    margin-bottom: 15px; }
+    .myWorks .art-con .form-inline .zd-checkbox i {
+      background: #fff; }
+    .myWorks .art-con .form-inline .check-a i {
+      color: #666666; }
+    .myWorks .art-con .form-inline .form-group .btn {
+      background: #fff;
+      font-size: 14px;
+      color: #010101;
+      margin: 0 5px;
+      outline: none; }
+      .myWorks .art-con .form-inline .form-group .btn.focus {
+        outline: none; }
+      .myWorks .art-con .form-inline .form-group .btn.danger {
+        background: #e62344;
+        border: none;
+        color: #fff;
+        font-weight: 500;
+        text-shadow: none; }
+    .myWorks .art-con .form-inline .form-group .art-topnav {
+      position: relative; }
+      .myWorks .art-con .form-inline .form-group .art-topnav .art-icon {
+        width: 30px;
+        margin: 0 5px;
+        padding: 5px 0;
+        cursor: pointer;
+        text-align: center; }
+    .myWorks .art-con .form-inline .form-group .art-type {
+      margin-left: 10px; }
+    .myWorks .art-con .form-inline .form-group .art-down {
+      padding: 0;
+      right: 0;
+      min-width: 200px;
+      position: absolute;
+      margin-top: 2px;
+      display: none;
+      z-index: 1600; }
+      .myWorks .art-con .form-inline .form-group .art-down .input-group {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 5px 10px;
+        box-shadow: 0 0 3px 2px #e4dada;
+        -o-box-shadow: 0 0 3px 2px #e4dada;
+        -ms-box-shadow: 0 0 3px 2px #e4dada;
+        -moz-box-shadow: 0 0 3px 2px #e4dada;
+        -webkit-box-shadow: 0 0 3px 2px #e4dada;
+        border-radius: 5px 0 5px 5px;
+        -o-border-radius: 5px 0 5px 5px;
+        -ms-border-radius: 5px 0 5px 5px;
+        -moz-border-radius: 5px 0 5px 5px;
+        -webkit-border-radius: 5px 0 5px 5px; }
+        .myWorks .art-con .form-inline .form-group .art-down .input-group .btn-search {
+          background: #e60000;
+          color: #fff;
+          border: #e60000 solid 1px;
+          height: 30px;
+          line-height: 16px;
+          font-weight: normal;
+          text-shadow: none; }
+        .myWorks .art-con .form-inline .form-group .art-down .input-group .inp-search {
+          height: 30px;
+          border: #ebebeb solid 1px;
+          box-shadow: 0 0 5px 5px #f8f8f8;
+          -o-box-shadow: 0 0 5px 5px #f8f8f8;
+          -ms-box-shadow: 0 0 5px 5px #f8f8f8;
+          -moz-box-shadow: 0 0 5px 5px #f8f8f8;
+          -webkit-box-shadow: 0 0 5px 5px #f8f8f8;
+          font-size: 12px; }
+      .myWorks .art-con .form-inline .form-group .art-down i {
+        color: #272636;
+        font-size: 14px;
+        margin-right: 8px; }
+    .myWorks .art-con .form-inline .form-group .menu {
+      background: rgba(249, 249, 249, 0.9);
+      border-radius: 5px 0 5px 5px;
+      -o-border-radius: 5px 0 5px 5px;
+      -ms-border-radius: 5px 0 5px 5px;
+      -moz-border-radius: 5px 0 5px 5px;
+      -webkit-border-radius: 5px 0 5px 5px;
+      box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -o-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -ms-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -moz-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -webkit-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3); }
+      .myWorks .art-con .form-inline .form-group .menu ul {
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        /* @include borshan(0,0,3px,2px,#e4dada); */
+        border-radius: 5px 5px 0 0;
+        -o-border-radius: 5px 5px 0 0;
+        -ms-border-radius: 5px 5px 0 0;
+        -moz-border-radius: 5px 5px 0 0;
+        -webkit-border-radius: 5px 5px 0 0;
+        list-style: none;
+        margin: 10px; }
+        .myWorks .art-con .form-inline .form-group .menu ul li {
+          padding: 10px; }
+          .myWorks .art-con .form-inline .form-group .menu ul li a {
+            color: #888888; }
+    .myWorks .art-con .form-inline .form-group .active {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 5px 0 5px 5px;
+      -o-border-radius: 5px 0 5px 5px;
+      -ms-border-radius: 5px 0 5px 5px;
+      -moz-border-radius: 5px 0 5px 5px;
+      -webkit-border-radius: 5px 0 5px 5px;
+      box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -o-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -ms-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -moz-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3);
+      -webkit-box-shadow: 0 1px 4px 4px rgba(239, 215, 215, 0.3); }
+      .myWorks .art-con .form-inline .form-group .active .input-group .inp-search:focus {
+        box-shadow: 0 0 0 0 #f8f8f8;
+        -o-box-shadow: 0 0 0 0 #f8f8f8;
+        -ms-box-shadow: 0 0 0 0 #f8f8f8;
+        -moz-box-shadow: 0 0 0 0 #f8f8f8;
+        -webkit-box-shadow: 0 0 0 0 #f8f8f8; }
+      .myWorks .art-con .form-inline .form-group .active .art-down {
+        display: block; }
+      .myWorks .art-con .form-inline .form-group .active i {
+        color: #b8b8c2; }
+  .myWorks .art-con .search {
+    font-size: 0; }
+    .myWorks .art-con .search .inp-search {
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 4px 0 0 4px;
+      -o-border-radius: 4px 0 0 4px;
+      -ms-border-radius: 4px 0 0 4px;
+      -moz-border-radius: 4px 0 0 4px;
+      -webkit-border-radius: 4px 0 0 4px;
+      border: #cccccc solid 1px;
+      border-right: none; }
+    .myWorks .art-con .search .nav-searchBtn {
+      border-radius: 0 4px 4px 0;
+      -o-border-radius: 0 4px 4px 0;
+      -ms-border-radius: 0 4px 4px 0;
+      -moz-border-radius: 0 4px 4px 0;
+      -webkit-border-radius: 0 4px 4px 0;
+      background: #fff;
+      border: #cccccc solid 1px;
+      border-left: none;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer; }
+  .myWorks .art-con .table-responsive tr {
+    text-align: center;
+    border-bottom: 1px dashed #ddd; }
+    .myWorks .art-con .table-responsive tr td {
+      border: none; }
+    .myWorks .art-con .table-responsive tr th {
+      color: #666666;
+      font-size: 12px;
+      font-weight: normal;
+      text-align: center; }
+  .myWorks .zd-list-li {
+    position: relative;
+    width: 220px;
+    float: left;
+    padding: 0;
+    margin: 15px 80px 15px 0; }
+    .myWorks .zd-list-li .imgTip {
+      width: 100%;
+      height: 220px;
+      position: relative;
+      margin: 15px 0;
+      min-width: 220px; }
+      .myWorks .zd-list-li .imgTip .thumbnail {
+        border: #eeeeee solid 1px;
+        border-radius: 0;
+        -o-border-radius: 0;
+        -ms-border-radius: 0;
+        -moz-border-radius: 0;
+        -webkit-border-radius: 0;
+        margin-bottom: 12px;
+        height: 220px;
+        position: relative; }
+        .myWorks .zd-list-li .imgTip .thumbnail img {
+          padding: 10px;
+          max-height: 100%;
+          max-width: 100%;
+          position: absolute;
+          margin: auto;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0; }
+      .myWorks .zd-list-li .imgTip .gk dt, .myWorks .zd-list-li .imgTip .gk dd {
+        color: #f8e71c;
+        font-size: 14px; }
+      .myWorks .zd-list-li .imgTip .tip {
+        display: none;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px; }
+        .myWorks .zd-list-li .imgTip .tip dl {
+          width: 100%;
+          padding-top: 0;
+          margin-bottom: 0; }
+          .myWorks .zd-list-li .imgTip .tip dl dt {
+            text-align: left;
+            width: 60%;
+            display: inline-block;
+            text-overflow: ellipsis;
+            overflow: hidden; }
+          .myWorks .zd-list-li .imgTip .tip dl dd {
+            display: inline-block;
+            text-align: right;
+            width: 30%;
+            margin-left: 0; }
+        .myWorks .zd-list-li .imgTip .tip span {
+          font-size: 12px;
+          color: #fff; }
+      .myWorks .zd-list-li .imgTip:hover .tip {
+        display: block; }
+    .myWorks .zd-list-li .my {
+      width: 100%;
+      padding-top: 0;
+      margin-bottom: 0;
+      display: inline-block;
+      vertical-align: -1px; }
+      .myWorks .zd-list-li .my dt {
+        width: 68%;
+        display: inline-block;
+        color: #999999;
+        font-size: 12px;
+        font-weight: normal;
+        text-align: left; }
+      .myWorks .zd-list-li .my dd {
+        display: inline-block;
+        width: 30%;
+        margin-left: 0;
+        color: #e62344;
+        text-align: right; }
+        .myWorks .zd-list-li .my dd i {
+          margin-right: 3px; }
+    .myWorks .zd-list-li .zd-checkbox {
+      padding-left: 0; }
+
+.click {
+  background: #d4d4d4;
+  color: #000; }
+
+.artRecord-h1 {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 55px; }
+
+.bono {
+  border-bottom: none !important; }
+
+.mb50 {
+  margin-bottom: 50px; }
+
+.co66 {
+  color: #666666 !important; }
+
+.font20 {
+  font-size: 20px !important; }
+
+.bottom-btn {
+  margin-top: 50px; }
+  .bottom-btn .btn {
+    padding: 6px 26px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    color: #888888;
+    margin-right: 5px; }
+    .bottom-btn .btn.danger {
+      color: #fff !important;
+      background: #e62344;
+      border: none; }
+
+.tl tr td {
+  text-align: left; }
+
+.tl tr th {
+  text-align: left; }
+
+.tc {
+  text-align: center !important; }
+
+.tr {
+  text-align: right !important; }
+
+.co99 {
+  color: #999999; }
+
+.art-shareinfo tr td:first-child {
+  color: #999999;
+  width: 120px; }
+
+.art-shareinfo tr td:last-child {
+  text-align: right; }
+
+.art-otherInfo tr td:first-child {
+  color: #999999;
+  padding-left: 10%;
+  width: 20%; }
+
+.art-otherInfo tr td p {
+  margin: 10px 0; }
+
+.art-otherInfo tr td dl {
+  margin: 10px 0; }
+  .art-otherInfo tr td dl dt {
+    font-weight: normal;
+    text-align: left;
+    width: 100px; }
+  .art-otherInfo tr td dl dd {
+    margin-left: 0; }
+
+/* ========================= */
+.shareStatusTop {
+  border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  background: #eee;
+  height: auto;
+  border: #ccc solid 1px;
+  padding: 10px 0 30px; }
+  .shareStatusTop .tip {
+    text-align: center; }
+    .shareStatusTop .tip h2 {
+      color: #666666;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+      .shareStatusTop .tip h2 span {
+        color: #999999; }
+    .shareStatusTop .tip .btn {
+      max-width: 140px;
+      background: #fff;
+      margin-top: 10px;
+      margin-right: 10px;
+      padding: 6px 26px;
+      border: #eee solid 1px;
+      color: #888888;
+      font-weight: 600;
+      text-shadow: none;
+      font-size: 18px; }
+      .shareStatusTop .tip .btn.danger {
+        color: #fff !important;
+        background: #e62344; }
 
 /*
 Uploadify

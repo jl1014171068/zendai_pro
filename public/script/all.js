@@ -1346,7 +1346,7 @@ function validateForm(form){
      $(this).parents(".btn-group").find(".dropdown-toggle").html(html);
 })
  // 顶部下拉三角
-   $(".zd-checkbox").click(function(){
+   $(".zd-checkbox").not('.disabled').click(function(){
     if($(this).find('input').prop('checked')){
       $(this).find('input').prop('checked',false);
       $(this).removeClass('check-a');
@@ -1364,7 +1364,7 @@ function validateForm(form){
       $(this).parents(".other").find(".authorTip").hide();
     });
    // 艺术家信息页面作者信息鼠划效果
-   var zdListMargin=parseInt($(".zd-list-li").css("marginLeft"));
+   var zdListMargin=parseInt($(".user-info .zd-list-li").css("marginLeft"));
     if(zdListMargin<15){
       $(".zd-list-li").css("margin","15px 15px");
     }
@@ -1626,6 +1626,7 @@ $(".art-list-top .art-icon").on('click',function(){
        $(this).parents('.art-topnav').addClass('active').siblings('.art-topnav').removeClass('active');
     }
 })
+
 // 作品列表页弹出
  $(".zd-lightBox .lighimg").on('click',function(){
        var html='<div class="zdModal ano"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 zdclose"><i class="iconfont">&#xe63a;</i></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 prev"><i class="iconfont">&#xe638;</i></a> <div class="zdModal-diaog col-lg-10 col-md-10 col-sm-8 col-xs-8"><div class="zdLightImgs"><img src="" alt=""></div></div><a href="#" class="col-lg-1 col-md-1 col-sm-2 col-xs-2 next"><i class="iconfont">&#xe639;</i></a></div>';
@@ -1735,3 +1736,104 @@ $(".art-list-top .art-icon").on('click',function(){
       })
  }());
  // 上面是点击上色的组件，父级为uls类，子级为lis类名，上色为active各个模块的acticve样式自定义
+
+ // -------------------------下面是我的作品集页面的js-----------------------------------------
+  $(".myWorks .art-icon").on('click',function(){
+    if($(this).parents('.art-topnav').attr('class').indexOf('active')>-1){
+       $(this).parents('.art-topnav').removeClass('active');
+    }
+    else{
+       $(this).parents('.art-topnav').addClass('active').siblings('.art-topnav').removeClass('active');
+    }
+})
+ 
+$(".myWorks .zd-checkbox").on('click',function(){
+ var sum=$(".myWorks .zd-checkbox").length-1;
+  // 复选框总数量-1
+ var lengths=0;
+ // 这个是已选择的选择框数量
+ $(".myWorks .zd-checkbox").each(function(){
+   if($(this).find("input[type='checkbox']").prop('checked')&&$(this).attr("class").indexOf('all')<=-1){
+     lengths++;
+   }
+ })
+ $(".rename").removeClass('click').removeAttr("disabled");
+ $(".del").removeClass('click').removeAttr("disabled");
+ if(lengths!=1){
+  $(".rename").addClass('click').attr("disabled",true);
+ }
+ if(lengths==0){  
+    $(".del").addClass('click').attr("disabled",true);
+ }
+  
+  if($(this).attr('class').indexOf('all')>-1){
+     if($(this).find("input[type='checkbox']").prop('checked')){
+        $(".myWorks .zd-checkbox input[type='checkbox']").attr('checked',true);
+        $(".myWorks .zd-checkbox ").addClass('check-a');
+     }
+     else{
+        $(".myWorks .zd-checkbox input[type='checkbox']").removeAttr('checked');
+        $(".myWorks .zd-checkbox ").removeClass('check-a');
+     }
+  }
+  else if($(this).attr('class').indexOf('all')<=-1){
+     if(lengths==sum){
+    $(".myWorks .all input[type='checkbox']").prop('checked',true);
+    $(".myWorks .all").addClass('check-a');
+     }
+  }
+});
+  $("#newWorks").on('click',function(){
+    var reid=$(this).attr('rel');
+    $("#workForm .modal-body form").attr('action',reid);
+    $("#workForm").modal();
+  });
+  //我的作品集页面--新建·一个作品页的模态窗口
+   $("#create_works").click(function() {
+   $.ajax({
+     url: 'index.php',
+     type: 'post',
+     dataType: 'json',
+     success:function(data){
+         alert(1);
+     }
+   })
+  });
+upload("worksUpload1",'worksParameter1','index.php',1,4);
+// 新建我的作品集页面的上传图片
+  $("#renameWorks").on('click',function(){
+    var reid=$(this).attr('rel');
+    $("#workRenameForm .modal-body form").attr('action',reid);
+    $("#workRenameForm").modal();
+  });
+  //我的作品集页面--新建·一个作品页的模态窗口
+   $("#rename_works").click(function() {
+   $.ajax({
+     url: 'index.php',
+     type: 'post',
+     dataType: 'json',
+     success:function(data){
+         alert(1);
+     }
+   })
+  });
+
+// 删除我的作品集页面的重命名
+    $("#delWorks").on('click',function(){
+    var reid=$(this).attr('rel');
+    $("#workDelForm .modal-body form").attr('action',reid);
+    $("#workDelForm").modal();
+  });
+  //我的作品集页面--新建·一个作品页的模态窗口
+   $("#del_works").click(function() {
+   $.ajax({
+     url: 'index.php',
+     type: 'post',
+     dataType: 'json',
+     success:function(data){
+        alert(1);
+     }
+   })
+  });
+   // 新建我的作品集页面的重命名
+   // -------------------------上面是我的作品集页面的js---------------------------------------------
