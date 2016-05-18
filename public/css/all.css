@@ -7974,7 +7974,91 @@ input[type=button], input[type=text], input[type=password] {
 
 @media (max-width: 1200px) {
   .art-article {
+    padding-right: 50px; }
+  .art-list .zd-list-li {
+    margin: 15px 20px; }
+  .artRecord {
     padding-right: 50px; } }
+
+.imgModal {
+  cursor: pointer; }
+
+/* 作品详情页结束 */
+.artRecord {
+  margin-top: 20px;
+  padding-right: 70px;
+  padding-bottom: 150px; }
+  .artRecord .art-top {
+    margin-bottom: 30px; }
+    .artRecord .art-top .zd-h1 {
+      margin: 0; }
+    .artRecord .art-top .top-right .btn-group {
+      border: #cccccc solid 1px;
+      float: right !important;
+      border-radius: 6px;
+      -o-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -webkit-border-radius: 6px; }
+      .artRecord .art-top .top-right .btn-group button[type='button'] {
+        padding: 6px 15px;
+        background: #fff;
+        border: none;
+        color: #888888; }
+        .artRecord .art-top .top-right .btn-group button[type='button'].active {
+          outline: none;
+          color: #d63839;
+          background: #eeeeee; }
+  .artRecord .art-con .form-inline {
+    width: 100%;
+    background: #eeeeee;
+    padding: 6px 12px;
+    margin-bottom: 15px; }
+    .artRecord .art-con .form-inline .zd-checkbox i {
+      background: #fff; }
+    .artRecord .art-con .form-inline .check-a i {
+      color: #666666; }
+  .artRecord .art-con .search {
+    font-size: 0; }
+    .artRecord .art-con .search .inp-search {
+      display: inline-block;
+      vertical-align: middle;
+      border-radius: 4px 0 0 4px;
+      -o-border-radius: 4px 0 0 4px;
+      -ms-border-radius: 4px 0 0 4px;
+      -moz-border-radius: 4px 0 0 4px;
+      -webkit-border-radius: 4px 0 0 4px;
+      border: #cccccc solid 1px;
+      border-right: none; }
+    .artRecord .art-con .search .nav-searchBtn {
+      border-radius: 0 4px 4px 0;
+      -o-border-radius: 0 4px 4px 0;
+      -ms-border-radius: 0 4px 4px 0;
+      -moz-border-radius: 0 4px 4px 0;
+      -webkit-border-radius: 0 4px 4px 0;
+      background: #fff;
+      border: #cccccc solid 1px;
+      border-left: none;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer; }
+  .artRecord .art-con .table-responsive tr {
+    text-align: center;
+    border-bottom: 1px dashed #ddd; }
+    .artRecord .art-con .table-responsive tr td {
+      border: none; }
+    .artRecord .art-con .table-responsive tr th {
+      color: #666666;
+      font-size: 12px;
+      font-weight: normal;
+      text-align: center; }
+
+@media (max-width: 1200px) {
+  .artRecord .art-con .search .inp-search {
+    width: 65px; } }
 
 /*
 Uploadify

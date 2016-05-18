@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" /> 
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --> 
+  <!-- <input type="text" autocorrect="off" /> --> 
+  <!-- 关闭ios输入法自动修正 --> 
+  <meta name="format-detection" content="email=no" /> 
+  <!-- 关闭邮箱识别 --> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <!-- 关闭号码识别 --> 
+  <title>我的艺术中心-艺术品认证记录</title> 
+  <!-- Bootstrap --> 
+  <link rel="stylesheet" href="css/all.css">
+  <!-- 下面是自己写的样式和重置样式 --> 
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --> 
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> 
+  <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]--> 
+  <script src="script/bootstrap.min.js"></script> 
+ </head> 
+ <body> 
+ <nav class="navbar navbar-default navbar-fixed-top zd-nav"> 
+   <div class="container-fluid pano"> 
+    <!-- Brand and toggle get grouped for better mobile display --> 
+    <div class="navbar-header col-lg-2 col-sm-2 col-md-2 col-xs-12"> 
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand " href="#"> <img src="images/logo.png" alt="" /> </a> 
+    </div> 
+    <div class="col-lg-10 col-sm-10 col-md-10 col-xs-12 pano pt50" id="bs-example-navbar-collapse-1"> 
+     <ul class="nav navbar-nav  pano"> 
+      <li ><a href="#">我的艺术中心 <span class="sr-only">(current)</span></a></li> 
+      <li class="active"><a href="#">艺术品管理</a></li> 
+      <li><a href="#">线上美术馆</a></li> 
+     </ul> 
+     <div class="zd-nav-right fright "> 
+      <form class="navbar-left pano navbar-form" role="search"> 
+       <div class="btn-group "> 
+        <button type="button" class="btn search-sel  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 艺术作品 <i class="iconfont font16">&#xe623;</i> </button> 
+        <ul class="dropdown-menu"> 
+         <li><a href="#">艺术作品</a></li> 
+         <li><a href="#">艺术家</a></li> 
+         <li><a href="#">艺术机构</a></li> 
+        </ul> 
+       </div> 
+       <input type="search" class="inp-search form-control" aria-label="..." placeholder="搜索艺术作品" /> 
+       <button class="nav-searchBtn"><i class="iconfont">&#xe600;</i></button> 
+      </form> 
+      <div class="right-tx pull-right"> 
+       <img src="images/user-head.png" alt="" /> 
+       <ul class="down-menu ano"> 
+        <li><a href="#">个人信息</a></li> 
+        <li><a href="#">我的作品</a></li> 
+        <li><a href="#">我的收藏</a></li> 
+        <li><a href="#">退出登录</a></li> 
+       </ul> 
+      </div> 
+     </div> 
+    </div>
+    <!-- /.navbar-collapse --> 
+   </div>
+   <!-- /.container-fluid --> 
+  </nav> 
+  <!-- 导航结束 --> 
+  <div class="container-fluid  purple he100 pull-left clearfix"> 
+   <div class="row he100"> 
+    <div class=" pano he100 navbar-fixed-top  col-lg-2 col-sm-2 col-md-2 col-xs-4 left-nav "> 
+     <ul class="ulno "> 
+      <li><a href="art-list.html"><i class="iconfont ">&#xe613;</i>我的作品集</a></li> 
+      <li><a href="#"><i class="iconfont ">&#xe614;</i>查看所有艺术品</a></li> 
+      <li><a href="art-upload.php"><i class="iconfont  valali">&#xe608;</i>上传作品</a></li> 
+      <li class="matbot"></li>
+      <li  class="active"><a href="art-certiRecord.html"><i class="iconfont val">&#xe624;</i>艺术品认证记录</a></li> 
+      <li><a href="art-shareRecord.html"><i class="iconfont">&#xe615;</i>艺术品分享记录</a></li> 
+      <li><a href="art-changeNameRecord.html"><i class="iconfont val font18">&#xe619;</i>艺术品过户记录</a></li> 
+      <li><a href="art-commissionRecord.html"><i class="iconfont val">&#xe617;</i>艺术品代销记录</a></li> 
+
+     </ul> 
+    </div> 
+    <!-- 左侧导航部分 --> 
+ 
+    <article class="right-article artRecord  col-lg-10 col-sm-10 col-md-10 col-xs-8 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-4"> 
+       <div class="art-top clearfix">
+           <h1 class="zd-h1 col-lg-4 col-sm-4 col-md-4 col-xs-4">艺术品认证记录</h1> 
+           <div class="col-lg-8 col-sm-8 col-md-8 col-xs-8 top-right ano no-selected">
+             <div class="btn-group uls" role="group" aria-label="...">
+               <button type="button" class="btn btn-default lis active">全部认证记录</button>
+               <button type="button" class="btn btn-default lis">我的作品</button>
+               <button type="button" class="btn btn-default lis">全部认证记录</button>
+             </div>
+           </div> 
+       </div>
+       <div class="art-con clearfix">
+
+           <form class="form-inline">
+  <div class="form-group">
+    <select class="form-control" id='addSelectFile'><option value="1">全部艺术品类型</option><option value="1">花鸟虫鱼</option></select>
+  </div>
+  <div class="form-group">
+    <label class="checkbox-inline zd-checkbox no-selected check-a"> <input type="checkbox" id="inlineCheckbox1" class='zdChec' value="option1" checked /><i class="iconfont font14">&#xe622;</i>认证成功的记录</label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox-inline zd-checkbox no-selected check-a"> <input type="checkbox" id="inlineCheckbox2" class='zdChec' value="option1" checked /><i class="iconfont font14">&#xe622;</i>认证失败的记录</label>
+  </div>
+  <div class="form-group">
+    <label class="checkbox-inline zd-checkbox no-selected check-a"> <input type="checkbox" id="inlineCheckbox3" class='zdChec' value="option1" checked/><i class="iconfont font14">&#xe622;</i>认证中的记录</label>
+  </div>
+   <div class="form-group search pull-right ">
+    <input type="search" class="inp-search form-control" aria-label="..." placeholder="按照姓名查找好友">
+    <button class="nav-searchBtn"><i class="iconfont">&#xe600;</i></button>
+  </div>
+</form>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+      <div class="table-responsive">
+      <table class="table table-hover zd-userInfo-table">
+      <thead>
+        <tr>
+          <th>艺术品名称</th>
+          <th>类型</th>
+          <th>持有者</th>
+          <th>认证人</th>
+          <th>认证时间</th>
+          <th>相关图文</th>
+          <th>认证状态</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="red">幕后的桃子</td>
+          <td>版画</td>
+          <td class="blue">吴大师</td>
+          <td class="blue">张三</td>
+          <td>2016年3月18日</td>
+          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
+          <td><span class="green"><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+        <tr>
+          <td class="blue">幕后的桃子</td>
+          <td>版画</td>
+          <td class="blue">吴大师</td>
+          <td class="blue">张三</td>
+          <td>2016年3月18日</td>
+          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
+          <td><span class="blue"><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+        <tr>
+          <td class="blue">幕后的桃子</td>
+          <td>版画</td>
+          <td class="blue">吴大师</td>
+          <td class="blue">张三</td>
+          <td>2016年3月18日</td>
+          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
+          <td><span class="green"><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>
+        <tr>
+          <td class="blue">幕后的桃子</td>
+          <td>版画</td>
+          <td class="blue">吴大师</td>
+          <td class="blue">张三</td>
+          <td>2016年3月18日</td>
+          <td dataSrc='images/art-works-2.jpg'><i class="iconfont font16 huang imgModal">&#xe602;</i></td>
+          <td><span class="blue"><i class="iconfont ">&#xe624;</i>已认证</span></td>
+        </tr>     
+      </tbody>
+    </table>
+    </div>
+<!-- 一个表单结束了 -->
+       </div>
+       
+    </article> 
+   </div> 
+  </div>  
+<script src="script/all.js"></script> 
+</body>
+</html>

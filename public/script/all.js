@@ -1340,55 +1340,6 @@ function validateForm(form){
 }
 // 表单验证组件调用方式为validateForm("dom元素带id调用或类前缀之类的")
 
-    $("#real-name .uploads").each(function(index,el){
-   var fileUl=document.getElementById('real-name');
-   var file=fileUl.getElementsByClassName('uploads')[index];
-   file.getElementsByTagName('input')[0].onchange=function(){
-  var fileList = this.files; 
-  var imgObjPreview = this.parentNode.getElementsByTagName('img')[0];
-    if (this.files && this.files[0]) {
-    //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
-    imgObjPreview.src = window.URL.createObjectURL(this.files[0]);
-    var spanReal=this.parentNode.parentNode.getElementsByTagName("span")[0];
-    var buttonReal=this.parentNode.parentNode.getElementsByTagName("button")[0];
-    var divReal=this.parentNode.parentNode;
-    var onc=$(this).parents(".uploads").find(".upload-btn");
-    // buttonReal.hide();
-    
-    if(spanReal){spanReal.remove();}
-    onc.html("重新上传");
-    onc.addClass('resetBtn col-lg-6').removeClass('form-control');
-    $(this).parents('.form-group').append(onc);   
-    }
-    else {
-    //IE下，使用滤镜
-    this.select();
-    var imgSrc=this.value;    //这里的imgsrc地址直接拿的input的
-    var localImagId = this.parentNode.getElementsByTagName('img')[0];
-    
-    //图片异常的捕捉，防止用户修改后缀来伪造图片
-
-    try {
-    localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
-
-    localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
-    imgObjPreview.src=imgSrc;
-
-    }
-    catch (e) {
-
-    alert("您上传的图片格式不正确，请重新选择!");
-
-    return false;
-
-    }
-    document.selection.empty();
-
-    }
-    return true;
-   }
-});
-    // 上面是实名认证页面的上传图片
  $(".btn-group .dropdown-menu li").click(function(){
      var downText=$(this).text();
      var html=""+downText+"    <i class='iconfont font16'>&#xe623;</i>";
@@ -1778,3 +1729,9 @@ $(".art-list-top .art-icon").on('click',function(){
    })
   });
   // 上面是更改备忘录
+ $(function(){
+      $(".uls .lis").click(function(){
+        $(this).addClass('active').siblings('.lis').removeClass('active');
+      })
+ }());
+ // 上面是点击上色的组件，父级为uls类，子级为lis类名，上色为active各个模块的acticve样式自定义
