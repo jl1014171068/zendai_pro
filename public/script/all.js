@@ -1738,7 +1738,7 @@ $(".art-list-top .art-icon").on('click',function(){
  // 上面是点击上色的组件，父级为uls类，子级为lis类名，上色为active各个模块的acticve样式自定义
 
  // -------------------------下面是我的作品集页面的js-----------------------------------------
-  $(".myWorks .art-icon").on('click',function(){
+  $(".myWorks .art-icon,.allWorks .art-icon").on('click',function(){
     if($(this).parents('.art-topnav').attr('class').indexOf('active')>-1){
        $(this).parents('.art-topnav').removeClass('active');
     }

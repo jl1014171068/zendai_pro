@@ -78,7 +78,7 @@
       <li><a href="#"><i class="iconfont val">&#xe624;</i>艺术品认证记录</a></li> 
       <li><a href="#"><i class="iconfont">&#xe615;</i>艺术品分享记录</a></li> 
       <li><a href="#"><i class="iconfont val">&#xe619;</i>艺术品过户记录</a></li> 
-      <li><a href="#"><i class="iconfont val">&#xe617;</i>艺术品代销记录</a></li> 
+      <li><a href="#"><i class="iconfont val">&#xe617;</i>外界和代销记录</a></li> 
 
      </ul> 
     </div> 
