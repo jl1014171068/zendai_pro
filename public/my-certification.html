@@ -129,8 +129,8 @@
               <label for="inputPassword3" class="col-lg-2  col-sm-2 col-md-2 col-xs-12 control-label">本人近期照片 </label>               
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
                 <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
-                <input type="file" class="upload-inp" id="iden-upload1" accept="image/*"/>
-                <input type="hidden" id="iden-parameter1">       
+                <input type="file" class="upload-inp" id="cer-upload1" accept="image/*"/>
+                <input type="hidden" id="cer-parameter1">       
               </div>   
               </div>   
               <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
@@ -138,21 +138,25 @@
      </div>
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">证件背面图片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload2" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload2]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">仅支持jpg、png格式</span> 
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="cer-upload2" accept="image/*"/>
+                <input type="hidden" id="cer-parameter2">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div> 
+       <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">仅支持jpg、png格式</span> 
       </div> 
       <div class="form-group"> 
        <label for="inputPassword3" class="col-lg-2 col-sm-2 col-md-2 col-xs-12 control-label">手持证件照片</label> 
-       <div class="col-lg-2 col-md-2 col-sm-2  col-xs-12 uploads"> 
-        <input type="file" class="upload-inp" id="upload3" accept="image/*" /> 
-        <img src="" alt="" /> 
-        <button class="btn file btn-default form-control upload-btn" onclick="$('input[id=upload3]').click();return false;"><i class="iconfont font14">&#xe608;</i>上传图片...</button> 
-       </div> 
-       <span class="col-lg-8 col-sm-8 col-md-8 col-xs-12 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span> 
+       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 pl">
+                <div class="col-lg-4 col-md-4 col-sm-4  col-xs-12 uploadsin"> 
+                <input type="file" class="upload-inp" id="cer-upload3" accept="image/*"/>
+                <input type="hidden" id="cer-parameter3">       
+              </div>   
+              </div>   
+              <div class='uploadsinImg hidden col-lg-10 col-md-10 col-sm-10  col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-0'></div>
+       <span class="col-lg-6 col-sm-6 col-md-6 col-xs-12 tip control-label">请双手持证件照于胸前，拍摄一张半身照，要求证件字体清晰可辨。仅支持jpg、png格式</span> 
       </div> 
       <div class="form-group"> 
        <div class="col-sm-offset-2 col-lg-10"> 
@@ -164,5 +168,11 @@
    </div> 
   </div>  
   <script src="script/all.js"></script> 
+  <script>
+  // 上传组件调用，分别为inputfile的id和其对应的隐藏文本域id，发送到对应的php文件，后面两个参数分别为最多上传1张和占父级位的2栏，后面两个值不用动
+    upload("cer-upload1",'cer-parameter1','index.php',1,2);
+    upload("cer-upload2",'cer-parameter2','index.php',1,2);
+    upload("cer-upload3",'cer-parameter3','index.php',1,2);
+  </script>
  </body>
 </html>
